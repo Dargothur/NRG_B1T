@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Ignore import metadata
+*.import
+.godot/imported/
