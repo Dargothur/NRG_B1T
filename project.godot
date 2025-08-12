@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="NRG_B1T"
+run/main_scene="res://Scenes/Levels/Master.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [rendering]
 

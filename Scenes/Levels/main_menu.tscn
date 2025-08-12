@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://djocbrspid51n"]
+
+[ext_resource type="Script" uid="uid://cug1uglyjy8b5" path="res://Scenes/NewGameButton.gd" id="1_6o2xy"]
+[ext_resource type="Script" uid="uid://cjrv8y1va7sgx" path="res://Scenes/Levels/main_menu.gd" id="1_ch370"]
+[ext_resource type="Script" uid="uid://wbphec80ieg4" path="res://Scenes/ExitGameButton.gd" id="2_pxfuh"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_de6xy"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ch370")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -245.0
+offset_right = 244.0
+offset_bottom = 720.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = SubResource("ImageTexture_de6xy")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "New Game
+"
+script = ExtResource("1_6o2xy")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Exit"
+script = ExtResource("2_pxfuh")

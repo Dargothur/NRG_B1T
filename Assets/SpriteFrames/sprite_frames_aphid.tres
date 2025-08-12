@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://bmd7ojb1nfl02"]
+
+[ext_resource type="Texture2D" uid="uid://c77puofdmjtul" path="res://Assets/Images/Bugs/Aphid/Aphid-Sheet.png" id="1_3slmr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1we5a"]
+atlas = ExtResource("1_3slmr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s71k"]
+atlas = ExtResource("1_3slmr")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1we5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s71k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
