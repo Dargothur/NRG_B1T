@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="NRG_B1T"
-run/main_scene="res://Scenes/Levels/Master.tscn"
+run/main_scene="uid://djocbrspid51n"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+GameMaster="*res://Assets/Scripts/game_master.gd"
+SceneManager="*res://Assets/Scripts/scene_manager.gd"
 
 [display]
 

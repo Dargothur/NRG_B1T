@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://n4i0hh17d660"]
-
-[ext_resource type="Script" uid="uid://cnnoq6v2j7v7g" path="res://Scenes/Levels/Master.gd" id="1_i7u4n"]
-
-[node name="Master" type="Node"]
-script = ExtResource("1_i7u4n")
