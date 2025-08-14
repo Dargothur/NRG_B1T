@@ -4,6 +4,8 @@ var starting_position
 var t = 0.0
 var clicked = false
 var trigger_sound = false
+var speed = 200
+var drop_spot = Vector2(0,0)
 
 func _ready():
 	pass
@@ -24,7 +26,9 @@ func _physics_process(delta: float) -> void:
 			t += delta * 0.4
 		else:
 			trigger_sound = true
-		$".".global_position = starting_position.lerp(Vector2(1200, 570), t)
+		$".".global_position = starting_position.lerp(GameMaster.player_label_position, t)
+	else:
+		global_position = global_position.move_toward(drop_spot, speed * delta)
 		
 	if(trigger_sound):
 		clicked = false
@@ -33,4 +37,7 @@ func _physics_process(delta: float) -> void:
 		self.visible = false
 		$CollisionShape2D.disabled = true
 		trigger_sound = false
-		
+	
+func set_drop_spot(drop_spot_target):
+	drop_spot = drop_spot_target
+	
