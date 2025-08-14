@@ -1,17 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=6 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
-[ext_resource type="SpriteFrames" uid="uid://bm5wtpdv0l4a3" path="res://Assets/SpriteFrames/sprite_frames_daisy.tres" id="3_a8d8m"]
-[ext_resource type="Script" uid="uid://dbxf4qubfimfn" path="res://Assets/Scripts/daisy.gd" id="5_a8d8m"]
-[ext_resource type="SpriteFrames" uid="uid://c5okwluexhy7o" path="res://Assets/SpriteFrames/sprite_frames_sprout.tres" id="6_k18i5"]
+[ext_resource type="Texture2D" uid="uid://8wo20jbalqux" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
+[ext_resource type="PackedScene" uid="uid://dr6li6bitr503" path="res://Assets/Objects/daisy.tscn" id="3_l5bq5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
 bg_color = Color(0, 0, 0, 1)
 border_width_top = 5
 border_color = Color(1, 1, 1, 1)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_06pid"]
 
 [node name="game_level" type="Node2D"]
 script = ExtResource("1_0rvva")
@@ -188,19 +185,17 @@ grow_vertical = 0
 theme = ExtResource("2_0rvva")
 alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_0rvva")
+
 [node name="PlayerCurrencyLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "$100"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(244, 191)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("3_a8d8m")
-autoplay = "default"
-frame_progress = 0.949758
 
 [node name="Panel" type="Panel" parent="."]
 z_index = -5
@@ -219,63 +214,5 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="Daisy2" type="Area2D" parent="."]
-position = Vector2(500, 293)
-script = ExtResource("5_a8d8m")
-
-[node name="Daisy Animation" type="AnimatedSprite2D" parent="Daisy2"]
-texture_filter = 1
-sprite_frames = ExtResource("6_k18i5")
-autoplay = "default"
-frame_progress = 0.441842
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Daisy2"]
-shape = SubResource("CircleShape2D_06pid")
-metadata/_edit_lock_ = true
-
-[node name="Timer" type="Timer" parent="Daisy2"]
-wait_time = 20.0
-autostart = true
-
-[node name="Daisy3" type="Area2D" parent="."]
-position = Vector2(839, 331)
-script = ExtResource("5_a8d8m")
-
-[node name="Daisy Animation" type="AnimatedSprite2D" parent="Daisy3"]
-texture_filter = 1
-sprite_frames = ExtResource("6_k18i5")
-autoplay = "default"
-frame_progress = 0.582042
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Daisy3"]
-shape = SubResource("CircleShape2D_06pid")
-metadata/_edit_lock_ = true
-
-[node name="Timer" type="Timer" parent="Daisy3"]
-wait_time = 20.0
-autostart = true
-
-[node name="Daisy" type="Area2D" parent="."]
+[node name="Daisy" parent="." instance=ExtResource("3_l5bq5")]
 position = Vector2(695, 196)
-script = ExtResource("5_a8d8m")
-
-[node name="Daisy Animation" type="AnimatedSprite2D" parent="Daisy"]
-texture_filter = 1
-sprite_frames = ExtResource("6_k18i5")
-autoplay = "default"
-frame_progress = 0.486583
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Daisy"]
-shape = SubResource("CircleShape2D_06pid")
-metadata/_edit_lock_ = true
-
-[node name="Timer" type="Timer" parent="Daisy"]
-wait_time = 20.0
-autostart = true
-
-[connection signal="timeout" from="Daisy2/Timer" to="Daisy2" method="_on_timer_timeout"]
-[connection signal="timeout" from="Daisy3/Timer" to="Daisy3" method="_on_timer_timeout"]
-[connection signal="timeout" from="Daisy/Timer" to="Daisy" method="_on_timer_timeout"]
