@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://b26u8nc0xkvy5"]
+
+[ext_resource type="Texture2D" uid="uid://qjpircdr5qe2" path="res://Assets/Images/Currency/1-Cent/1-Cent-Sheet.png" id="1_dod2j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apn70"]
+atlas = ExtResource("1_dod2j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr72a"]
+atlas = ExtResource("1_dod2j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbhpx"]
+atlas = ExtResource("1_dod2j")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l5ce"]
+atlas = ExtResource("1_dod2j")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apn70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr72a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbhpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l5ce")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

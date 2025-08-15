@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://c5okwluexhy7o"]
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://c5okwluexhy7o"]
 
 [ext_resource type="Texture2D" uid="uid://coq2uplk0q67x" path="res://Assets/Images/Flowers/Sprout/Sprout-Sheet.png" id="1_glrgn"]
+[ext_resource type="Texture2D" uid="uid://mx8srkmdxn00" path="res://Assets/Images/Flowers/Sprout/Withered-Sprout.png" id="2_0h71u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0h71u"]
 atlas = ExtResource("1_glrgn")
@@ -8,6 +9,14 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_omlom"]
 atlas = ExtResource("1_glrgn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lxls"]
+atlas = ExtResource("2_0h71u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86piv"]
+atlas = ExtResource("2_0h71u")
 region = Rect2(32, 0, 32, 32)
 
 [resource]
@@ -21,5 +30,16 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lxls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86piv")
+}],
+"loop": true,
+"name": &"wilted",
 "speed": 2.0
 }]

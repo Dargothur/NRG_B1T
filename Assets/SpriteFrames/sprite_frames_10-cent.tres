@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bi8qvfvcr4gde"]
+
+[ext_resource type="Texture2D" uid="uid://d3xoampaljqrp" path="res://Assets/Images/Currency/10-Cent/10-Cent-Sheet.png" id="1_csqbu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_328n7"]
+atlas = ExtResource("1_csqbu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bejs"]
+atlas = ExtResource("1_csqbu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x87be"]
+atlas = ExtResource("1_csqbu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pxe0"]
+atlas = ExtResource("1_csqbu")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_328n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bejs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x87be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pxe0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

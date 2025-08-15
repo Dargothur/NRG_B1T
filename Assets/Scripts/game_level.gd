@@ -8,3 +8,4 @@ func _ready():
 	
 func _process(delta):
 	money_label.text = "$%d" % [GameMaster.player_currency]
+	

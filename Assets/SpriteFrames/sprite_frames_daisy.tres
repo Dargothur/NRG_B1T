@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://bm5wtpdv0l4a3"]
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://bm5wtpdv0l4a3"]
 
 [ext_resource type="Texture2D" uid="uid://bhn7mt3hcbhoa" path="res://Assets/Images/Flowers/Daisy/Daisy-Sheet.png" id="1_3qr2t"]
+[ext_resource type="Texture2D" uid="uid://bysjfxaam5p86" path="res://Assets/Images/Flowers/Daisy/Withered-Daisy.png" id="2_p6vv2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p6vv2"]
 atlas = ExtResource("1_3qr2t")
@@ -8,6 +9,14 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uq8tu"]
 atlas = ExtResource("1_3qr2t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c2f7"]
+atlas = ExtResource("2_p6vv2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5jst"]
+atlas = ExtResource("2_p6vv2")
 region = Rect2(32, 0, 32, 32)
 
 [resource]
@@ -22,4 +31,15 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c2f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5jst")
+}],
+"loop": true,
+"name": &"wilted",
+"speed": 4.0
 }]

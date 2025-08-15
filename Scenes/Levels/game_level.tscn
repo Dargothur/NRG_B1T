@@ -1,78 +1,155 @@
-[gd_scene load_steps=6 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=15 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
 [ext_resource type="Texture2D" uid="uid://8wo20jbalqux" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
-[ext_resource type="PackedScene" uid="uid://dr6li6bitr503" path="res://Assets/Objects/daisy.tscn" id="3_l5bq5"]
+[ext_resource type="Texture2D" uid="uid://b52l3de3iq0kw" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
+[ext_resource type="Script" uid="uid://5w8ru62gu430" path="res://Assets/Scripts/btn_action.gd" id="3_a8d8m"]
+[ext_resource type="Texture2D" uid="uid://basgo31yc84js" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
+[ext_resource type="Texture2D" uid="uid://bj5o12kn1imqr" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
+[ext_resource type="Texture2D" uid="uid://xo5lr0oquo0d" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
+[ext_resource type="Texture2D" uid="uid://dnl2l5gw5qikv" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
+[ext_resource type="Texture2D" uid="uid://bk0yc54yr0e5c" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
+[ext_resource type="Texture2D" uid="uid://dlay0xxbmeu03" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
+[ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
 bg_color = Color(0, 0, 0, 1)
 border_width_top = 5
 border_color = Color(1, 1, 1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyqiq"]
+size = Vector2(1280, 570)
+
 [node name="game_level" type="Node2D"]
 script = ExtResource("1_0rvva")
+
+[node name="lblDaisyPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 23.0
+offset_top = 661.0
+offset_right = 75.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$3"
+horizontal_alignment = 2
+
+[node name="lblFreesiaPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 102.0
+offset_top = 661.0
+offset_right = 179.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$30"
+horizontal_alignment = 2
+
+[node name="lblPoppyPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 197.0
+offset_top = 661.0
+offset_right = 274.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$50"
+horizontal_alignment = 2
+
+[node name="lblRosePrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 284.0
+offset_top = 661.0
+offset_right = 378.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$100"
+horizontal_alignment = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_top = 570.0
 offset_right = 1130.0
 offset_bottom = 720.0
-grow_horizontal = 0
-grow_vertical = 0
 size_flags_vertical = 8
 theme = ExtResource("2_0rvva")
+metadata/_edit_lock_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrDaisy" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer"]
+[node name="btnDaisy" type="Button" parent="HBoxContainer/cntrDaisy"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Flower 1"
+icon = ExtResource("3_06pid")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_a8d8m")
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrFreesia" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer2"]
+[node name="btnFreesia" type="Button" parent="HBoxContainer/cntrFreesia"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Flower 2"
+icon = ExtResource("5_0ohik")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_a8d8m")
+toolType = 2
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrPoppy" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer3"]
+[node name="btnPoppy" type="Button" parent="HBoxContainer/cntrPoppy"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Flower 3"
+icon = ExtResource("6_jsuo6")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_a8d8m")
+toolType = 3
 
-[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrRose" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer4"]
+[node name="btnRose" type="Button" parent="HBoxContainer/cntrRose"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Flower 4"
+icon = ExtResource("7_hyqiq")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_a8d8m")
+toolType = 4
 
 [node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -87,19 +164,53 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Flower 5"
 
-[node name="MarginContainer6" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer8" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer6"]
+[node name="Button" type="Button" parent="HBoxContainer/MarginContainer8"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Watering Can Upgrade"
+icon = ExtResource("8_otl2i")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer9" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="HBoxContainer/MarginContainer9"]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("9_l5ayb")
+icon_alignment = 1
+expand_icon = true
+
+[node name="cntrWateringCanUpgrade" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="btnWateringCanUpgrade" type="Button" parent="HBoxContainer/cntrWateringCanUpgrade"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("10_hyqiq")
 autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
 
 [node name="MarginContainer7" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -114,30 +225,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Bug Killer Upgrade"
 autowrap_mode = 2
-
-[node name="MarginContainer8" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer8"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="MarginContainer9" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer9"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="MarginContainer10" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -186,12 +273,15 @@ theme = ExtResource("2_0rvva")
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_0rvva")
 
 [node name="PlayerCurrencyLabel" type="Label" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "$100"
 horizontal_alignment = 1
@@ -214,5 +304,29 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="Daisy" parent="." instance=ExtResource("3_l5bq5")]
-position = Vector2(695, 196)
+[node name="Garden" type="Area2D" parent="."]
+script = ExtResource("11_jsuo6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garden"]
+position = Vector2(640, 285)
+shape = SubResource("RectangleShape2D_hyqiq")
+
+[node name="SpawnTimer" type="Timer" parent="Garden"]
+wait_time = 0.2
+autostart = true
+
+[connection signal="mouse_entered" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrFreesia/btnFreesia" to="HBoxContainer/cntrFreesia/btnFreesia" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrFreesia/btnFreesia" to="HBoxContainer/cntrFreesia/btnFreesia" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrFreesia/btnFreesia" to="HBoxContainer/cntrFreesia/btnFreesia" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrPoppy/btnPoppy" to="HBoxContainer/cntrPoppy/btnPoppy" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrPoppy/btnPoppy" to="HBoxContainer/cntrPoppy/btnPoppy" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrPoppy/btnPoppy" to="HBoxContainer/cntrPoppy/btnPoppy" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_pressed"]
+[connection signal="mouse_entered" from="Garden" to="Garden" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Garden" to="Garden" method="_on_mouse_exited"]
+[connection signal="timeout" from="Garden/SpawnTimer" to="Garden" method="_on_spawn_timer_timeout"]
