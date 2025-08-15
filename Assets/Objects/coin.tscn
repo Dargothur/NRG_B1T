@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cug1ypkn5ciob"]
+[gd_scene load_steps=7 format=3 uid="uid://qrycb0w8wp4h"]
 
 [ext_resource type="Script" uid="uid://bhf7p4v1nbx6h" path="res://Assets/Scripts/coin.gd" id="1_2llng"]
 [ext_resource type="SpriteFrames" uid="uid://b26u8nc0xkvy5" path="res://Assets/SpriteFrames/sprite_frames_1-cent.tres" id="2_nyhc2"]
-[ext_resource type="AudioStream" uid="uid://bimwldcwvsvke" path="res://Assets/Sound Effects/retro-coin-4-236671.mp3" id="3_nyhc2"]
+[ext_resource type="AudioStream" uid="uid://c4p80xi33dsub" path="res://Assets/Sound Effects/retro-coin-4-236671.mp3" id="3_nyhc2"]
+[ext_resource type="Texture2D" uid="uid://js68x8nev6gx" path="res://Assets/Images/Particle/Sparkle-Particle.png" id="4_ohyys"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ohyys"]
 radius = 16.0
+
+[sub_resource type="Curve" id="Curve_0mvpx"]
+_data = [Vector2(0.0113636, 0.988764), 0.0, 0.0, 0, 0, Vector2(0.909091, 0.47191), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_2llng")
@@ -22,5 +27,45 @@ frame_progress = 0.12076
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_nyhc2")
 bus = &"Sound Effects"
+
+[node name="Flower_Sparkle" type="CPUParticles2D" parent="."]
+texture_filter = 1
+emitting = false
+texture = ExtResource("4_ohyys")
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+randomness = 0.61
+lifetime_randomness = 0.1
+direction = Vector2(0, -2)
+spread = 30.0
+gravity = Vector2(0, 250)
+initial_velocity_min = 120.0
+initial_velocity_max = 150.0
+angular_velocity_min = -189.09
+angular_velocity_max = 218.18
+scale_amount_min = 5.0
+scale_amount_max = 5.5
+scale_amount_curve = SubResource("Curve_0mvpx")
+
+[node name="Small_Sparkle" type="CPUParticles2D" parent="."]
+texture_filter = 1
+emitting = false
+amount = 4
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+randomness = 0.61
+lifetime_randomness = 0.1
+direction = Vector2(0, -2)
+spread = 30.0
+gravity = Vector2(0, 150)
+initial_velocity_min = 50.0
+initial_velocity_max = 75.0
+angular_velocity_min = -189.09
+angular_velocity_max = 218.18
+scale_amount_min = 5.0
+scale_amount_max = 5.5
+scale_amount_curve = SubResource("Curve_0mvpx")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
