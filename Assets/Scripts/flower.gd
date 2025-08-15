@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name Flower
+
 enum GrowthStage {
 	SPROUT = 0,
 	FLOWER
@@ -28,7 +30,8 @@ func setup(new_flower_type):
 	flowerType = new_flower_type
 	
 func _process(delta: float) -> void:
-	water_level -= delta * 2
+	water_level -= delta
+	$ProgressBar.value = water_level
 	if(water_level <= 50 and water_level >= 1):
 		$"Flower Animation".play("wilted")
 	elif(water_level <= 0):
@@ -67,3 +70,14 @@ func _on_timer_timeout() -> void:
 		new_coin.set_drop_spot(Vector2(global_position.x + x,global_position.y + y))
 		new_coin.reparent(get_parent())
 		
+func water(amt_of_water):
+	$ProgressBar.visible = true
+	$ProgressBar/progressBarTimer.start()
+	water_level += amt_of_water
+	if(water_level > 100):
+		water_level = 100
+		$ProgressBar.visible = false
+
+
+func _on_progress_bar_timer_timeout() -> void:
+	$ProgressBar.visible = false

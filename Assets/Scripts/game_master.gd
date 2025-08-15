@@ -6,11 +6,13 @@ enum Tool {
 	FREESIA,
 	POPPY,
 	ROSE,
+	VINES,
+	FLYTRAP,
 	WATERING_CAN,
 	BUG_KILLER
 }
 
-var player_currency = 10
+var player_currency = 1000
 var player_label_position = null
 var current_tool = Tool.NONE
 var in_garden = false
@@ -20,6 +22,3 @@ func _process(delta: float) -> void:
 		print("esc pressed")
 		current_tool = Tool.NONE
 		Input.set_custom_mouse_cursor(null)
-	
-				
-		

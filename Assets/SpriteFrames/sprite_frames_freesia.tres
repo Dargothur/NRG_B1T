@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://dhdq8dsdm7618"]
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://dhdq8dsdm7618"]
 
 [ext_resource type="Texture2D" uid="uid://cavp8e704m16e" path="res://Assets/Images/Flowers/Freesia/Freesia-Sheet.png" id="1_mrf5q"]
+[ext_resource type="Texture2D" uid="uid://02eewlc5baid" path="res://Assets/Images/Flowers/Freesia/Withered-Freesia.png" id="2_bnjcv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bnjcv"]
 atlas = ExtResource("1_mrf5q")
@@ -8,6 +9,14 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rs5m"]
 atlas = ExtResource("1_mrf5q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkw0a"]
+atlas = ExtResource("2_bnjcv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t13fj"]
+atlas = ExtResource("2_bnjcv")
 region = Rect2(32, 0, 32, 32)
 
 [resource]
@@ -22,4 +31,15 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkw0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t13fj")
+}],
+"loop": true,
+"name": &"wilted",
+"speed": 4.0
 }]
