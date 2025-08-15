@@ -32,6 +32,7 @@ func setup(new_coin_value):
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released() and !clicked:
 		starting_position = $".".global_position
+		$Small_Sparkle.emitting = true
 		clicked = true
 		get_viewport().set_input_as_handled()
 
@@ -53,7 +54,10 @@ func _physics_process(delta: float) -> void:
 		clicked = false
 		GameMaster.player_currency += coin_value
 		$AudioStreamPlayer2D.play()
-		self.visible = false
+		$Flower_Sparkle.amount = coin_value * 3
+		$Flower_Sparkle.emitting = true
+		$Small_Sparkle.emitting = true
+		$"Coin Animation".visible = false
 		$CollisionShape2D.disabled = true
 		trigger_sound = false
 	
