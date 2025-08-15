@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=21 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://xo5lr0oquo0d" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
 [ext_resource type="Texture2D" uid="uid://dnl2l5gw5qikv" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
 [ext_resource type="Texture2D" uid="uid://bk0yc54yr0e5c" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
+[ext_resource type="Texture2D" uid="uid://cm17mi7jne8s5" path="res://Assets/Images/Sprinkler/icnSprinkler.png" id="10_1o3sn"]
 [ext_resource type="Texture2D" uid="uid://dlay0xxbmeu03" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
 [ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
 [ext_resource type="Texture2D" uid="uid://djb6yd2o6071l" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
@@ -256,12 +257,15 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="Button" type="Button" parent="HBoxContainer/MarginContainer10"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Sprinkler"
+icon = ExtResource("10_1o3sn")
 text_overrun_behavior = 1
+icon_alignment = 1
+expand_icon = true
 
 [node name="cntrWateringCanUpgrade" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2

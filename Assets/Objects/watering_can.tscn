@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxoyqgmv3ribv"]
 
-[ext_resource type="Script" uid="uid://diohtae6y6xxf" path="res://watering_can.gd" id="1_xcyei"]
+[ext_resource type="Script" uid="uid://diohtae6y6xxf" path="res://Assets/Scripts/watering_can.gd" id="1_xcyei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aigni"]
 radius = 16.0
