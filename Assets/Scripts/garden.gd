@@ -4,6 +4,7 @@ var daisy = load("res://Assets/Images/Flowers/Daisy/icnDaisy.png")
 var freesia = load("res://Assets/Images/Flowers/Freesia/icnFreesia.png")
 var poppy = load("res://Assets/Images/Flowers/Poppy/icnPoppy.png")
 var rose = load("res://Assets/Images/Flowers/Rose/icnRose.png")
+var vines = load("res://Assets/Images/Flowers/Vines/icnVines.png")
 var watering_can = load("res://Assets/Images/Watering Can/Watering-Can.png")
 var bug_killer = load("res://Assets/Images/Fly Swatter/Fly Swatter.png")
 
@@ -20,6 +21,8 @@ func _on_mouse_entered() -> void:
 			Input.set_custom_mouse_cursor(poppy)
 		GameMaster.Tool.ROSE:
 			Input.set_custom_mouse_cursor(rose)
+		GameMaster.Tool.VINES:
+			Input.set_custom_mouse_cursor(vines)
 		GameMaster.Tool.WATERING_CAN:
 			Input.set_custom_mouse_cursor(watering_can)
 		GameMaster.Tool.BUG_KILLER:
@@ -68,6 +71,14 @@ func _process(delta: float) -> void:
 					new_flower.setup(new_flower.FlowerType.ROSE)
 					add_child(new_flower)
 					new_flower.global_position = get_global_mouse_position()
+					spawn_ready = false
+					GameMaster.player_currency -= 100
+			GameMaster.Tool.VINES:
+				if(GameMaster.player_currency >= 100):
+					var scnVines = load("res://Assets/Objects/vines.tscn")
+					var new_vines = scnVines.instantiate()
+					add_child(new_vines)
+					new_vines.global_position = get_global_mouse_position()
 					spawn_ready = false
 					GameMaster.player_currency -= 100
 			GameMaster.Tool.WATERING_CAN:
