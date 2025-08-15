@@ -1,17 +1,22 @@
-[gd_scene load_steps=15 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=20 format=3 uid="uid://b12gq7t7al4t8"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
+[ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
-[ext_resource type="Texture2D" uid="uid://dgno1vdrodbrd" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
-[ext_resource type="Texture2D" uid="uid://u6n3fj1gybd8" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
-[ext_resource type="Script" path="res://Assets/Scripts/btn_action.gd" id="3_a8d8m"]
-[ext_resource type="Texture2D" uid="uid://blny14psnioyw" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
-[ext_resource type="Texture2D" uid="uid://vyv2knqcjd2o" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
-[ext_resource type="Texture2D" uid="uid://bwu66txfvlpa3" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
-[ext_resource type="Texture2D" uid="uid://cfmpfoophgn14" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
-[ext_resource type="Texture2D" uid="uid://21qwiqbdlpu5" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
-[ext_resource type="Texture2D" uid="uid://bcb7nm6cjb6ix" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
-[ext_resource type="Script" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
+[ext_resource type="Texture2D" uid="uid://8wo20jbalqux" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
+[ext_resource type="Texture2D" uid="uid://b52l3de3iq0kw" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
+[ext_resource type="Script" uid="uid://5w8ru62gu430" path="res://Assets/Scripts/btn_action.gd" id="3_a8d8m"]
+[ext_resource type="Texture2D" uid="uid://basgo31yc84js" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
+[ext_resource type="Texture2D" uid="uid://bj5o12kn1imqr" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
+[ext_resource type="Texture2D" uid="uid://xo5lr0oquo0d" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
+[ext_resource type="Texture2D" uid="uid://dnl2l5gw5qikv" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
+[ext_resource type="Texture2D" uid="uid://bk0yc54yr0e5c" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
+[ext_resource type="Texture2D" uid="uid://dlay0xxbmeu03" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
+[ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
+[ext_resource type="Texture2D" uid="uid://djb6yd2o6071l" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
+[ext_resource type="Texture2D" uid="uid://ddijrsfl06kf" path="res://Assets/Images/Watering Can/Watering-Can.png" id="13_wwnap"]
+[ext_resource type="Script" uid="uid://8e57bhvgsrop" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
+[ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
+[ext_resource type="Texture2D" uid="uid://da4pweomumbun" path="res://Assets/Images/Fly Swatter/Fly Swatter.png" id="16_1o3sn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
 bg_color = Color(0, 0, 0, 1)
@@ -27,9 +32,9 @@ script = ExtResource("1_0rvva")
 [node name="lblDaisyPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 23.0
+offset_left = 85.0
 offset_top = 661.0
-offset_right = 75.0
+offset_right = 137.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
@@ -39,9 +44,9 @@ horizontal_alignment = 2
 [node name="lblFreesiaPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 102.0
+offset_left = 187.0
 offset_top = 661.0
-offset_right = 179.0
+offset_right = 264.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
@@ -51,9 +56,9 @@ horizontal_alignment = 2
 [node name="lblPoppyPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 197.0
+offset_left = 302.0
 offset_top = 661.0
-offset_right = 274.0
+offset_right = 379.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
@@ -63,9 +68,69 @@ horizontal_alignment = 2
 [node name="lblRosePrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 284.0
+offset_left = 408.0
 offset_top = 661.0
-offset_right = 378.0
+offset_right = 502.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$100"
+horizontal_alignment = 2
+
+[node name="lblFlyTrapPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 524.0
+offset_top = 661.0
+offset_right = 618.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$100"
+horizontal_alignment = 2
+
+[node name="lblVinesPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 638.0
+offset_top = 661.0
+offset_right = 732.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$100"
+horizontal_alignment = 2
+
+[node name="lblSprinklerPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 753.0
+offset_top = 661.0
+offset_right = 847.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$100"
+horizontal_alignment = 2
+
+[node name="lblWCUpgradePrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 868.0
+offset_top = 661.0
+offset_right = 962.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$100"
+horizontal_alignment = 2
+
+[node name="lblBKUpgradePrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 983.0
+offset_top = 661.0
+offset_right = 1077.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
@@ -78,6 +143,7 @@ offset_right = 1130.0
 offset_bottom = 720.0
 size_flags_vertical = 8
 theme = ExtResource("2_0rvva")
+alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="cntrDaisy" type="MarginContainer" parent="HBoxContainer"]
@@ -151,19 +217,6 @@ expand_icon = true
 script = ExtResource("3_a8d8m")
 toolType = 4
 
-[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer5"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Flower 5"
-
 [node name="MarginContainer8" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -196,36 +249,6 @@ icon = ExtResource("9_l5ayb")
 icon_alignment = 1
 expand_icon = true
 
-[node name="cntrWateringCanUpgrade" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="btnWateringCanUpgrade" type="Button" parent="HBoxContainer/cntrWateringCanUpgrade"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-icon = ExtResource("10_hyqiq")
-autowrap_mode = 2
-icon_alignment = 1
-expand_icon = true
-
-[node name="MarginContainer7" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer7"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Bug Killer Upgrade"
-autowrap_mode = 2
-
 [node name="MarginContainer10" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -237,30 +260,42 @@ custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+text = "Sprinkler"
+text_overrun_behavior = 1
 
-[node name="MarginContainer11" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrWateringCanUpgrade" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer11"]
+[node name="btnWateringCanUpgrade" type="Button" parent="HBoxContainer/cntrWateringCanUpgrade"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+icon = ExtResource("10_hyqiq")
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
 
-[node name="MarginContainer12" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrBugKillerUpgrade" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer12"]
+[node name="btnBugKillerUpgrade" type="Button" parent="HBoxContainer/cntrBugKillerUpgrade"]
+texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+icon = ExtResource("11_svdjn")
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 1130.0
@@ -315,6 +350,49 @@ shape = SubResource("RectangleShape2D_hyqiq")
 wait_time = 0.2
 autostart = true
 
+[node name="Toolbox" type="VBoxContainer" parent="."]
+offset_left = 1180.0
+offset_right = 1280.0
+offset_bottom = 200.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_0rvva")
+
+[node name="cntrWateringCan" type="MarginContainer" parent="Toolbox"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="btnWateringCan" type="Button" parent="Toolbox/cntrWateringCan"]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("13_wwnap")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("14_ynn2x")
+
+[node name="cntrBugKiller" type="MarginContainer" parent="Toolbox"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="btnBugKiller" type="Button" parent="Toolbox/cntrBugKiller"]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("16_1o3sn")
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("15_svdjn")
+
 [connection signal="mouse_entered" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_pressed"]
@@ -330,3 +408,5 @@ autostart = true
 [connection signal="mouse_entered" from="Garden" to="Garden" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Garden" to="Garden" method="_on_mouse_exited"]
 [connection signal="timeout" from="Garden/SpawnTimer" to="Garden" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="Toolbox/cntrWateringCan/btnWateringCan" to="Toolbox/cntrWateringCan/btnWateringCan" method="_on_pressed"]
+[connection signal="pressed" from="Toolbox/cntrBugKiller/btnBugKiller" to="Toolbox/cntrBugKiller/btnBugKiller" method="_on_pressed"]

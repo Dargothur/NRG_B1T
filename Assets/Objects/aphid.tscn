@@ -8,7 +8,7 @@
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_ms80v")
-frame_progress = 0.769953
+frame_progress = 0.510536
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_pfsbd")

@@ -4,6 +4,8 @@ var daisy = load("res://Assets/Images/Flowers/Daisy/icnDaisy.png")
 var freesia = load("res://Assets/Images/Flowers/Freesia/icnFreesia.png")
 var poppy = load("res://Assets/Images/Flowers/Poppy/icnPoppy.png")
 var rose = load("res://Assets/Images/Flowers/Rose/icnRose.png")
+var watering_can = load("res://Assets/Images/Watering Can/Watering-Can.png")
+var bug_killer = load("res://Assets/Images/Fly Swatter/Fly Swatter.png")
 
 var spawn_ready = true
 
@@ -11,21 +13,22 @@ func _on_mouse_entered() -> void:
 	GameMaster.in_garden = true
 	match GameMaster.current_tool:
 		GameMaster.Tool.DAISY:
-			print("Flower type is Daisy.")
 			Input.set_custom_mouse_cursor(daisy)
 		GameMaster.Tool.FREESIA:
-			print("Flower type is Freesia.")
 			Input.set_custom_mouse_cursor(freesia)
 		GameMaster.Tool.POPPY:
-			print("Flower type is Poppy.")
 			Input.set_custom_mouse_cursor(poppy)
 		GameMaster.Tool.ROSE:
-			print("Flower type is Rose.")
 			Input.set_custom_mouse_cursor(rose)
+		GameMaster.Tool.WATERING_CAN:
+			Input.set_custom_mouse_cursor(watering_can)
+		GameMaster.Tool.BUG_KILLER:
+			Input.set_custom_mouse_cursor(bug_killer)
 
 
 func _on_mouse_exited() -> void:
 	GameMaster.in_garden = false
+	Input.set_custom_mouse_cursor(null)
 	
 	
 func _process(delta: float) -> void:
@@ -67,6 +70,10 @@ func _process(delta: float) -> void:
 					new_flower.global_position = get_global_mouse_position()
 					spawn_ready = false
 					GameMaster.player_currency -= 100
+			GameMaster.Tool.WATERING_CAN:
+				pass
+			GameMaster.Tool.BUG_KILLER:
+				pass
 
 func _on_spawn_timer_timeout() -> void:
 	spawn_ready = true

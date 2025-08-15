@@ -11,8 +11,9 @@ script = ExtResource("1_jvfm2")
 [node name="Flower Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = ExtResource("2_ojd4l")
+animation = &"wilted"
 autoplay = "default"
-frame_progress = 0.64277
+frame_progress = 0.014564
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
