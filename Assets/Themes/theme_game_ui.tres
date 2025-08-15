@@ -3,7 +3,16 @@
 [ext_resource type="FontFile" uid="uid://ce3ko3xrvdk8i" path="res://Assets/Fonts/Daydream.ttf" id="1_88t5b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pav4e"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apdkg"]
 bg_color = Color(0, 0, 0, 1)
@@ -30,5 +39,7 @@ Button/font_sizes/font_size = 9
 Button/fonts/font = ExtResource("1_88t5b")
 Button/styles/hover = SubResource("StyleBoxFlat_pav4e")
 Button/styles/normal = SubResource("StyleBoxFlat_apdkg")
+Label/constants/outline_size = 5
+Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("1_88t5b")
 Panel/styles/panel = SubResource("StyleBoxFlat_06pid")

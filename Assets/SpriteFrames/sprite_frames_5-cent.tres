@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bog0pp12trdq2"]
+
+[ext_resource type="Texture2D" uid="uid://bqhn2qtcihqfw" path="res://Assets/Images/Currency/5-Cent/5-Cent-Sheet.png" id="1_thl00"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rdtw"]
+atlas = ExtResource("1_thl00")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6i4j4"]
+atlas = ExtResource("1_thl00")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfgwv"]
+atlas = ExtResource("1_thl00")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e8tf"]
+atlas = ExtResource("1_thl00")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rdtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6i4j4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfgwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e8tf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

@@ -6,9 +6,28 @@ var clicked = false
 var trigger_sound = false
 var speed = 200
 var drop_spot = Vector2(0,0)
+var coin_value = 1
+
+var one_cent = load("res://Assets/SpriteFrames/sprite_frames_1-cent.tres")
+var three_cent = load("res://Assets/SpriteFrames/sprite_frames_3-cent.tres")
+var five_cent = load("res://Assets/SpriteFrames/sprite_frames_5-cent.tres")
+var ten_cent = load("res://Assets/SpriteFrames/sprite_frames_10-cent.tres")
 
 func _ready():
 	pass
+		
+func setup(new_coin_value):
+	coin_value = new_coin_value
+	match coin_value:
+		1:
+			$"Coin Animation".sprite_frames = one_cent
+		3:
+			$"Coin Animation".sprite_frames = three_cent
+		5:
+			$"Coin Animation".sprite_frames = five_cent
+		10:
+			$"Coin Animation".sprite_frames = ten_cent
+	$"Coin Animation".play()
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released() and !clicked:
@@ -32,7 +51,7 @@ func _physics_process(delta: float) -> void:
 		
 	if(trigger_sound):
 		clicked = false
-		GameMaster.player_currency += 3
+		GameMaster.player_currency += coin_value
 		$AudioStreamPlayer2D.play()
 		self.visible = false
 		$CollisionShape2D.disabled = true
