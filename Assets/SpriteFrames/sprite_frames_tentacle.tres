@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://bo2b1lfwstki4"]
+
+[ext_resource type="Texture2D" uid="uid://voh7modsjjlq" path="res://Assets/Images/Flowers/Vines/Vine Tent-Sheet.png" id="1_gwrxo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjos3"]
+atlas = ExtResource("1_gwrxo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32y28"]
+atlas = ExtResource("1_gwrxo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57hbx"]
+atlas = ExtResource("1_gwrxo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nwxr"]
+atlas = ExtResource("1_gwrxo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmsnc"]
+atlas = ExtResource("1_gwrxo")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjos3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32y28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57hbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nwxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmsnc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

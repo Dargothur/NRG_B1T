@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://uv6jlrpf1ef4"]
+
+[ext_resource type="Script" uid="uid://ch1y8suqoqwtc" path="res://Assets/Scripts/vines.gd" id="1_55dux"]
+[ext_resource type="SpriteFrames" uid="uid://bl350dvbprcik" path="res://Assets/SpriteFrames/sprite_frames_vines.tres" id="2_gdf6g"]
+[ext_resource type="PackedScene" uid="uid://co241euqo2bua" path="res://Assets/Flowers/Vines/grab_coin.tscn" id="2_uog6j"]
+[ext_resource type="SpriteFrames" uid="uid://bo2b1lfwstki4" path="res://Assets/SpriteFrames/sprite_frames_tentacle.tres" id="4_imocg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55dux"]
+
+[node name="Vines" type="Area2D"]
+script = ExtResource("1_55dux")
+tent_grab = ExtResource("2_uog6j")
+
+[node name="vines_ani" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("2_gdf6g")
+
+[node name="vine_area" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_55dux")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Tentacle" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("4_imocg")
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
