@@ -252,13 +252,13 @@ expand_icon = true
 script = ExtResource("3_a8d8m")
 toolType = 5
 
-[node name="cntrSprinkler" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer10" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="btnSprinkler" type="Button" parent="HBoxContainer/cntrSprinkler"]
+[node name="Button" type="Button" parent="HBoxContainer/MarginContainer10"]
 texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -268,8 +268,6 @@ icon = ExtResource("10_1o3sn")
 text_overrun_behavior = 1
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("3_a8d8m")
-toolType = 7
 
 [node name="cntrWateringCanUpgrade" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -416,9 +414,6 @@ script = ExtResource("15_svdjn")
 [connection signal="mouse_entered" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_pressed"]
-[connection signal="mouse_entered" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_mouse_exited"]
-[connection signal="pressed" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_pressed"]
 [connection signal="mouse_entered" from="Garden" to="Garden" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Garden" to="Garden" method="_on_mouse_exited"]
 [connection signal="timeout" from="Garden/SpawnTimer" to="Garden" method="_on_spawn_timer_timeout"]

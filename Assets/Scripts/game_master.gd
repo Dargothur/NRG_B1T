@@ -8,6 +8,7 @@ enum Tool {
 	ROSE,
 	VINES,
 	FLYTRAP,
+	SPRINKLER,
 	WATERING_CAN,
 	BUG_KILLER
 }

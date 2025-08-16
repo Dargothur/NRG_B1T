@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=22 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://21qwiqbdlpu5" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
 [ext_resource type="Texture2D" uid="uid://bhsv7sjnibtha" path="res://Assets/Images/Sprinkler/icnSprinkler.png" id="10_1o3sn"]
 [ext_resource type="Texture2D" uid="uid://bcb7nm6cjb6ix" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
+[ext_resource type="PackedScene" uid="uid://brcmncowo3og" path="res://Assets/Objects/sprinkler.tscn" id="11_gmuxe"]
 [ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
 [ext_resource type="Texture2D" uid="uid://bgr18ojbnpfk5" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
 [ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can.png" id="13_wwnap"]
@@ -252,13 +253,13 @@ expand_icon = true
 script = ExtResource("3_a8d8m")
 toolType = 5
 
-[node name="cntrSprinkler" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer10" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="btnSprinkler" type="Button" parent="HBoxContainer/cntrSprinkler"]
+[node name="Button" type="Button" parent="HBoxContainer/MarginContainer10"]
 texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -268,8 +269,9 @@ icon = ExtResource("10_1o3sn")
 text_overrun_behavior = 1
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("3_a8d8m")
-toolType = 7
+
+[node name="Sprinkler" parent="HBoxContainer/MarginContainer10" instance=ExtResource("11_gmuxe")]
+position = Vector2(-142, -232)
 
 [node name="cntrWateringCanUpgrade" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -416,9 +418,6 @@ script = ExtResource("15_svdjn")
 [connection signal="mouse_entered" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_pressed"]
-[connection signal="mouse_entered" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_mouse_exited"]
-[connection signal="pressed" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_pressed"]
 [connection signal="mouse_entered" from="Garden" to="Garden" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Garden" to="Garden" method="_on_mouse_exited"]
 [connection signal="timeout" from="Garden/SpawnTimer" to="Garden" method="_on_spawn_timer_timeout"]

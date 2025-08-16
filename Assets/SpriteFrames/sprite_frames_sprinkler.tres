@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://cf1s3nee33qdo"]
+
+[ext_resource type="Texture2D" uid="uid://bkqhk6p2cy8s3" path="res://Assets/Images/Sprinkler/Sprinkler-Sheet.png" id="1_wxlu5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btgtk"]
+atlas = ExtResource("1_wxlu5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5thl"]
+atlas = ExtResource("1_wxlu5")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btgtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5thl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
