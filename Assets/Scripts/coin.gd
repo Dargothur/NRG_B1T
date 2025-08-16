@@ -63,7 +63,3 @@ func _physics_process(delta: float) -> void:
 func set_drop_spot(drop_spot_target):
 	drop_spot = drop_spot_target
 	
-func set_click(click_pos):
-	$Small_Sparkle.emitting = true
-	starting_position = click_pos
-	clicked = true

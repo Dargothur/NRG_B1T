@@ -25,6 +25,12 @@ SceneManager="*res://Assets/Scripts/scene_manager.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[global_group]
+
+flowers=""
+bugs=""
+spawn_areas=""
+
 [input]
 
 use_tool={
