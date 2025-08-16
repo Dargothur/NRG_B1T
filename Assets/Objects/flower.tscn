@@ -20,11 +20,12 @@ expand_margin_bottom = 1.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojd4l"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="Flower" type="Area2D"]
+[node name="Flower" type="Area2D" groups=["flowers"]]
 script = ExtResource("1_jvfm2")
 
 [node name="Flower Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_ojd4l")
 animation = &"wilted"
 autoplay = "default"

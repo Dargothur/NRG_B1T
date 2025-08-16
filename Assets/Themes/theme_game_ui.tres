@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://dh30geagbyidw"]
 
-[ext_resource type="FontFile" uid="uid://yvijosdanbh4" path="res://Assets/Fonts/Daydream.ttf" id="1_88t5b"]
+[ext_resource type="FontFile" uid="uid://ce3ko3xrvdk8i" path="res://Assets/Fonts/Daydream.ttf" id="1_88t5b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88t5b"]
 bg_color = Color(0, 0, 0, 1)

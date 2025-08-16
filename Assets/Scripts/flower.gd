@@ -16,6 +16,7 @@ enum FlowerType {
 
 var currentStage = GrowthStage.SPROUT
 var flowerType = FlowerType.DAISY
+var bugs
 
 @export var coin_scene = load("res://Assets/Objects/coin.tscn")
 
@@ -25,12 +26,19 @@ var poppy_anim = load("res://Assets/SpriteFrames/sprite_frames_poppy.tres")
 var rose_anim = load("res://Assets/SpriteFrames/sprite_frames_rose.tres")
 
 var water_level = 100.0
+var health = 100.0
+
+func _ready() -> void:
+	bugs = get_tree().get_nodes_in_group("bugs")
+	for bug in bugs:
+		bug.update_flowers()
 
 func setup(new_flower_type):
 	flowerType = new_flower_type
 	
 func _process(delta: float) -> void:
 	water_level -= delta
+	health += delta
 	$ProgressBar.value = water_level
 	if(water_level <= 50 and water_level >= 1):
 		$"Flower Animation".play("wilted")
@@ -81,3 +89,9 @@ func water(amt_of_water):
 
 func _on_progress_bar_timer_timeout() -> void:
 	$ProgressBar.visible = false
+	
+func take_damage(damage):
+	health -= damage
+
+func update_bugs():
+	bugs = get_tree().get_nodes_in_group("bugs")
