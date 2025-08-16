@@ -41,6 +41,7 @@ func _on_audio_stream_player_2d_finished() -> void:
 
 func _physics_process(delta: float) -> void:
 	if(clicked):
+		$CollisionShape2D.disabled = true
 		if(t < 1.0): 
 			t += delta * 0.4
 		else:
