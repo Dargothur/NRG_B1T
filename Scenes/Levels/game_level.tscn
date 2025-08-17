@@ -48,6 +48,18 @@ size = Vector2(20, 800)
 [node name="game_level" type="Node2D"]
 script = ExtResource("1_0rvva")
 
+[node name="lblDaisyName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_top = 587.0
+offset_right = 105.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "DAISY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="lblDaisyPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
@@ -480,7 +492,7 @@ position = Vector2(1350, 360)
 shape = SubResource("RectangleShape2D_r1fhj")
 
 [node name="WaveTimer" type="Timer" parent="."]
-wait_time = 180.0
+wait_time = 60.0
 
 [node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_d3gwg")
@@ -522,8 +534,112 @@ offset_top = 294.0
 offset_right = 1280.0
 offset_bottom = 426.0
 theme = ExtResource("2_0rvva")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 14
 text = "VICTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblFreesiaName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 114.0
+offset_top = 587.0
+offset_right = 221.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "Freesia"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblPoppyName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 229.0
+offset_top = 587.0
+offset_right = 336.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "Poppy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblRoseName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 345.0
+offset_top = 587.0
+offset_right = 452.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "Rose"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblFlytrapName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 457.0
+offset_top = 587.0
+offset_right = 570.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "FlyTrap"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblVinesName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 572.0
+offset_top = 587.0
+offset_right = 685.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "Vines"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblSprinklerName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 672.0
+offset_top = 587.0
+offset_right = 813.0
+offset_bottom = 621.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "Sprinkler"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblWateringCanUpgradeName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 788.0
+offset_top = 562.0
+offset_right = 929.0
+offset_bottom = 647.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "WC+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblWeaponUpgradeName" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 902.0
+offset_top = 562.0
+offset_right = 1043.0
+offset_bottom = 647.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 14
+text = "DMG+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -560,7 +676,11 @@ vertical_alignment = 1
 [connection signal="mouse_entered" from="Garden" to="Garden" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Garden" to="Garden" method="_on_mouse_exited"]
 [connection signal="timeout" from="Garden/SpawnTimer" to="Garden" method="_on_spawn_timer_timeout"]
+[connection signal="mouse_entered" from="Toolbox/cntrWateringCan/btnWateringCan" to="Toolbox/cntrWateringCan/btnWateringCan" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Toolbox/cntrWateringCan/btnWateringCan" to="Toolbox/cntrWateringCan/btnWateringCan" method="_on_mouse_exited"]
 [connection signal="pressed" from="Toolbox/cntrWateringCan/btnWateringCan" to="Toolbox/cntrWateringCan/btnWateringCan" method="_on_pressed"]
+[connection signal="mouse_entered" from="Toolbox/cntrBugKiller/btnBugKiller" to="Toolbox/cntrBugKiller/btnBugKiller" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Toolbox/cntrBugKiller/btnBugKiller" to="Toolbox/cntrBugKiller/btnBugKiller" method="_on_mouse_exited"]
 [connection signal="pressed" from="Toolbox/cntrBugKiller/btnBugKiller" to="Toolbox/cntrBugKiller/btnBugKiller" method="_on_pressed"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
 [connection signal="pressed" from="btnReturnToMainMenu" to="btnReturnToMainMenu" method="_on_pressed"]

@@ -16,7 +16,8 @@ func _process(delta: float) -> void:
 				$AudioStreamPlayer2D.play()
 				weapon_ready = false
 				$WeaponCD.start()
-
+	if(Input.is_action_just_pressed("ui_cancel")):
+		queue_free()
 
 func _on_weapon_cd_timeout() -> void:
 	weapon_ready = true

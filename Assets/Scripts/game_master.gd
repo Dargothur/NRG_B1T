@@ -22,6 +22,9 @@ var watering_lv = 1.0
 var watering_upgrade_cost = 100
 var weapon_upgrade_cost = 100
 
+var watering_can = null
+var weapon = null
+
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		print("esc pressed")
