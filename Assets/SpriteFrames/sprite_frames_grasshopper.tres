@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://blrkkwp14cav3"]
+
+[ext_resource type="Texture2D" uid="uid://dl5c78n88kgte" path="res://Assets/Images/Bugs/GrassHopper/GrassHopper-Sheet.png" id="1_f8e20"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoyky"]
+atlas = ExtResource("1_f8e20")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58qnn"]
+atlas = ExtResource("1_f8e20")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoyky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58qnn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,10 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://djocbrspid51n"]
+[gd_scene load_steps=7 format=3 uid="uid://djocbrspid51n"]
 
 [ext_resource type="Script" uid="uid://cug1uglyjy8b5" path="res://Assets/Scripts/btn_new_game.gd" id="1_6o2xy"]
 [ext_resource type="Script" uid="uid://cjrv8y1va7sgx" path="res://Assets/Scripts/main_menu.gd" id="1_ch370"]
+[ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="1_xg7my"]
 [ext_resource type="Script" uid="uid://wbphec80ieg4" path="res://Assets/Scripts/btn_exit_game.gd" id="2_pxfuh"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_de6xy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmo1h"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -13,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_xg7my")
 script = ExtResource("1_ch370")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -24,6 +29,7 @@ offset_left = -245.0
 offset_right = 244.0
 offset_bottom = 720.0
 grow_horizontal = 2
+alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
@@ -54,3 +60,16 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Exit"
 script = ExtResource("2_pxfuh")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -5
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wmo1h")
+
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainer/Button2" to="VBoxContainer/MarginContainer/Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/MarginContainer/Button2" to="VBoxContainer/MarginContainer/Button2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainer2/Button2" to="VBoxContainer/MarginContainer2/Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/MarginContainer2/Button2" to="VBoxContainer/MarginContainer2/Button2" method="_on_mouse_exited"]

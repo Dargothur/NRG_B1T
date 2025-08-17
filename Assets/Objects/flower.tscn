@@ -42,10 +42,10 @@ autostart = true
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
-offset_left = 16.0
-offset_top = -16.0
-offset_right = 20.0
-offset_bottom = 16.0
+offset_left = 32.0
+offset_top = -36.0
+offset_right = 40.0
+offset_bottom = 28.0
 rotation = 1.5708
 theme_override_styles/background = SubResource("StyleBoxFlat_jvfm2")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ojd4l")

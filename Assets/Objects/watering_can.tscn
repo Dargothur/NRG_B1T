@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxoyqgmv3ribv"]
 
 [ext_resource type="Script" uid="uid://diohtae6y6xxf" path="res://Assets/Scripts/watering_can.gd" id="1_xcyei"]
-[ext_resource type="Texture2D" uid="uid://3vqvfgyt3s5u" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="2_aigni"]
-[ext_resource type="AudioStream" uid="uid://bj6pwpph2v5qk" path="res://Assets/Sound Effects/watering-with-a-watering-can-39121.mp3" id="3_wh2hq"]
+[ext_resource type="Texture2D" uid="uid://31dxn14cn0fm" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="2_aigni"]
+[ext_resource type="AudioStream" uid="uid://c30lucakca2vr" path="res://Assets/Sound Effects/watering-with-a-watering-can-39121.mp3" id="3_wh2hq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aigni"]
 radius = 16.0
