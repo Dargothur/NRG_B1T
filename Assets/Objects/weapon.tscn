@@ -1,9 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://de87w3gmgvshg"]
+[gd_scene load_steps=6 format=3 uid="uid://bil56epgfabfd"]
 
 [ext_resource type="Script" uid="uid://caie21x1ydqeu" path="res://Assets/Scripts/weapon.gd" id="1_s50tw"]
-[ext_resource type="AudioStream" uid="uid://dc16lft1vdl34" path="res://Assets/Sound Effects/Splat.mp3" id="2_ii4p3"]
+[ext_resource type="AudioStream" uid="uid://d3vu0rtrov03k" path="res://Assets/Sound Effects/Splat.mp3" id="2_ii4p3"]
+[ext_resource type="Texture2D" uid="uid://3vqvfgyt3s5u" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="3_gxtdp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ii4p3"]
+
+[sub_resource type="Curve" id="Curve_bsaoe"]
+_data = [Vector2(0, 0.280899), 0.0, 0.0, 0, 0, Vector2(0.994318, 0.820225), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Area2D2" type="Area2D"]
 script = ExtResource("1_s50tw")
@@ -17,5 +22,25 @@ wait_time = 0.1
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_ii4p3")
 bus = &"Sound Effects"
+
+[node name="small-particle" type="CPUParticles2D" parent="."]
+emitting = false
+texture = ExtResource("3_gxtdp")
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.24
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 49.49
+initial_velocity_max = 130.3
+angle_min = -40.0
+angle_max = 40.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+split_scale = true
+scale_curve_x = null
+scale_curve_y = SubResource("Curve_bsaoe")
 
 [connection signal="timeout" from="WeaponCD" to="." method="_on_weapon_cd_timeout"]

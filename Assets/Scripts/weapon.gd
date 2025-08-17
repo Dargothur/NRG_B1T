@@ -13,7 +13,8 @@ func _process(delta: float) -> void:
 		for obj in objects:
 			if(obj is bug):
 				obj.take_damage(damage_value * lvl)
-				$AudioStreamPlayer2D.play()
+				_play_smack_audio()
+				$"small-particle".emitting = true
 				weapon_ready = false
 				$WeaponCD.start()
 	if(Input.is_action_just_pressed("ui_cancel")):
@@ -21,3 +22,8 @@ func _process(delta: float) -> void:
 
 func _on_weapon_cd_timeout() -> void:
 	weapon_ready = true
+
+func _play_smack_audio() -> void:
+	$AudioStreamPlayer2D.volume_db = randf_range(-20, -15)
+	$AudioStreamPlayer2D.pitch_scale = randf_range(1, 1.2)
+	$AudioStreamPlayer2D.play()
