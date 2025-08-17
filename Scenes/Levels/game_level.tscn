@@ -1,32 +1,35 @@
-[gd_scene load_steps=33 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=36 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
-[ext_resource type="Texture2D" uid="uid://8wo20jbalqux" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
-[ext_resource type="Texture2D" uid="uid://b52l3de3iq0kw" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
+[ext_resource type="Texture2D" uid="uid://dgno1vdrodbrd" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
+[ext_resource type="Texture2D" uid="uid://u6n3fj1gybd8" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
 [ext_resource type="Script" uid="uid://5w8ru62gu430" path="res://Assets/Scripts/btn_action.gd" id="3_a8d8m"]
-[ext_resource type="Texture2D" uid="uid://basgo31yc84js" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
-[ext_resource type="Texture2D" uid="uid://bj5o12kn1imqr" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
-[ext_resource type="Texture2D" uid="uid://xo5lr0oquo0d" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
-[ext_resource type="Texture2D" uid="uid://dnl2l5gw5qikv" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
-[ext_resource type="Script" uid="uid://d0fef86frne4g" path="res://Assets/Scripts/btn_fly_trap.gd" id="9_680e6"]
-[ext_resource type="Texture2D" uid="uid://bk0yc54yr0e5c" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
-[ext_resource type="Texture2D" uid="uid://cm17mi7jne8s5" path="res://Assets/Images/Sprinkler/icnSprinkler.png" id="10_1o3sn"]
-[ext_resource type="Texture2D" uid="uid://dlay0xxbmeu03" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
+[ext_resource type="Texture2D" uid="uid://blny14psnioyw" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
+[ext_resource type="Texture2D" uid="uid://vyv2knqcjd2o" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
+[ext_resource type="Texture2D" uid="uid://bwu66txfvlpa3" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
+[ext_resource type="Texture2D" uid="uid://cfmpfoophgn14" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
+[ext_resource type="Script" path="res://Assets/Scripts/btn_fly_trap.gd" id="9_680e6"]
+[ext_resource type="Texture2D" uid="uid://21qwiqbdlpu5" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
+[ext_resource type="Texture2D" uid="uid://bhsv7sjnibtha" path="res://Assets/Images/Sprinkler/icnSprinkler.png" id="10_1o3sn"]
+[ext_resource type="Texture2D" uid="uid://bcb7nm6cjb6ix" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
 [ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
-[ext_resource type="Texture2D" uid="uid://djb6yd2o6071l" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
+[ext_resource type="Texture2D" uid="uid://bgr18ojbnpfk5" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
 [ext_resource type="Script" uid="uid://dg2yih0ydbb74" path="res://Assets/Scripts/btn_watering_can_upgrade.gd" id="12_pe30b"]
-[ext_resource type="Texture2D" uid="uid://id1q74a2a6f0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
+[ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
 [ext_resource type="Script" uid="uid://cerl101utitav" path="res://Assets/Scripts/btn_bug_killer_upgrade.gd" id="14_d3gwg"]
-[ext_resource type="Script" uid="uid://8e57bhvgsrop" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
-[ext_resource type="AudioStream" uid="uid://c766jb2yxdmvm" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
+[ext_resource type="Script" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
+[ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
 [ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
-[ext_resource type="AudioStream" uid="uid://c58jhvx7h5oeu" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
+[ext_resource type="AudioStream" uid="uid://brsph1qv6xr7x" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
+[ext_resource type="AudioStream" uid="uid://comst6iaa8l4k" path="res://Assets/Sound Effects/Upgrade.mp3" id="16_hhwu1"]
 [ext_resource type="Script" uid="uid://cnc87jbrejnm8" path="res://Assets/Scripts/btn_victory.gd" id="16_vkhlp"]
 [ext_resource type="PackedScene" uid="uid://bd8gkrjcg1vos" path="res://Assets/Objects/Decals/details.tscn" id="17_itldg"]
-[ext_resource type="Texture2D" uid="uid://lk17wff2lctc" path="res://Assets/Images/Fly Swatter/Fly Swatter Icn.png" id="18_gmuxe"]
-[ext_resource type="AudioStream" uid="uid://de7pd2hmoqnq3" path="res://Assets/Sound Effects/nature-99499.mp3" id="24_d3gwg"]
-[ext_resource type="Script" uid="uid://yfu7ka6xlj7u" path="res://Assets/Scripts/btn_return_to_main_menu.gd" id="26_k17xk"]
+[ext_resource type="AudioStream" uid="uid://be0xjwittt22v" path="res://Assets/Sound Effects/level-win-6416.mp3" id="18_74nyn"]
+[ext_resource type="Texture2D" uid="uid://ca6kky6b40h46" path="res://Assets/Images/Fly Swatter/Fly Swatter Icn.png" id="18_gmuxe"]
+[ext_resource type="AudioStream" uid="uid://dy26dqlyejxnl" path="res://Assets/Sound Effects/nature-99499.mp3" id="24_d3gwg"]
+[ext_resource type="Script" path="res://Assets/Scripts/btn_return_to_main_menu.gd" id="26_k17xk"]
+[ext_resource type="AudioStream" uid="uid://ddltulokhedcl" path="res://Assets/Sound Effects/game-over-classic-206486.mp3" id="30_av1xa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
 bg_color = Color(0, 0, 0, 1)
@@ -338,6 +341,9 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("14_d3gwg")
 
+[node name="Upgrade_Noise" type="AudioStreamPlayer2D" parent="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade"]
+stream = ExtResource("16_hhwu1")
+
 [node name="cntrVictory" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -355,6 +361,9 @@ autowrap_mode = 2
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("16_vkhlp")
+
+[node name="Victory" type="AudioStreamPlayer2D" parent="HBoxContainer/cntrVictory/btnVictory"]
+stream = ExtResource("18_74nyn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 1130.0
@@ -526,6 +535,9 @@ theme_override_font_sizes/font_size = 100
 text = "VICTORY"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Game_Over" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_av1xa")
 
 [connection signal="mouse_entered" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_exited"]

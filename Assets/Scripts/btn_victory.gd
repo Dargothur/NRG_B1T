@@ -8,5 +8,6 @@ func _on_mouse_exited() -> void:
 
 func _on_pressed() -> void:
 	if GameMaster.player_currency >= 9999:
+		$Victory.play()
 		$"../../../lblVictory".visible = true
 		$"../../../btnReturnToMainMenu".visible = true
