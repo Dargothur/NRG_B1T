@@ -26,3 +26,5 @@ func _process(delta: float) -> void:
 	if(Input.is_action_just_released("use_tool")):
 		$"Sprinkle Effect".emitting = false
 		$AudioStreamPlayer2D.stop()
+	if(Input.is_action_just_pressed("ui_cancel")):
+		queue_free()

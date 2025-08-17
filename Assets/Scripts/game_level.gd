@@ -29,10 +29,10 @@ func _process(delta):
 		if gameover == 1:
 			$Game_Over.play()
 		$lblGameOver.visible = true
-		$btnReturnToMainMenu.visibile = true
+		$btnReturnToMainMenu.visible = true
 	
 func _on_wave_timer_timeout() -> void:
-	for n in randi_range(1,currentWave + 1):
+	for n in randi_range(2,currentWave + 2):
 		var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
 		var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
 		var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
@@ -42,7 +42,7 @@ func _on_wave_timer_timeout() -> void:
 		add_child(new_aphid)
 		new_aphid.setup(new_aphid.BugType.APHID, rand_point)
 	if currentWave >= 1:
-		for n in randi_range(1,currentWave + 1):
+		for n in randi_range(2,currentWave + 2):
 			var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
 			var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
 			var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
@@ -52,7 +52,7 @@ func _on_wave_timer_timeout() -> void:
 			add_child(new_caterpillar)
 			new_caterpillar.setup(new_caterpillar.BugType.CATERPILLAR, rand_point)
 	if currentWave >= 2:
-		for n in randi_range(1,currentWave + 1):
+		for n in randi_range(2,currentWave + 2):
 			var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
 			var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
 			var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
