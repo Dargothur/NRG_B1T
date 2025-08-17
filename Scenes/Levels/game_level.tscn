@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://id1q74a2a6f0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
 [ext_resource type="Script" uid="uid://cerl101utitav" path="res://Assets/Scripts/btn_bug_killer_upgrade.gd" id="14_d3gwg"]
 [ext_resource type="Script" uid="uid://8e57bhvgsrop" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
-[ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
+[ext_resource type="AudioStream" uid="uid://c766jb2yxdmvm" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
 [ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
 [ext_resource type="AudioStream" uid="uid://c58jhvx7h5oeu" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
 [ext_resource type="AudioStream" uid="uid://bl518kdy0y7vo" path="res://Assets/Sound Effects/Upgrade.mp3" id="16_hhwu1"]
@@ -543,7 +543,7 @@ offset_top = 294.0
 offset_right = 1280.0
 offset_bottom = 426.0
 theme = ExtResource("2_0rvva")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 100
 text = "VICTORY"
 horizontal_alignment = 1
 vertical_alignment = 1
