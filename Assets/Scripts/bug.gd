@@ -55,12 +55,12 @@ func setup(bug_type, new_position):
 			$AnimatedSprite2D.sprite_frames = aphid_sprites
 		BugType.CATERPILLAR:
 			$AnimatedSprite2D.sprite_frames = caterpillar_sprites
-			health = 300.0
+			health = 150.0
 			speed = 100.0
 			damage_value = 50
 		BugType.GRASSHOPPER:
 			$AnimatedSprite2D.sprite_frames = grasshopper_sprites
-			health = 400.0
+			health = 200.0
 			speed = 300.0
 			damage_value = 100
 	global_position = new_position

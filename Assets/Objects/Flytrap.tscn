@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0ibkc4gyl8wa"]
+[gd_scene load_steps=6 format=3 uid="uid://fitbbchk6dk7"]
 
 [ext_resource type="SpriteFrames" uid="uid://cdmhq4mh85kma" path="res://Assets/SpriteFrames/sprite_frames_flytrap.tres" id="1_35xvj"]
 [ext_resource type="Script" uid="uid://bo4jbykaihsmn" path="res://Assets/Scripts/flytrap.gd" id="1_kjugw"]
 [ext_resource type="SpriteFrames" uid="uid://doprvf02sd84g" path="res://Assets/SpriteFrames/new_sprite_closed_flytrap.tres" id="3_s3x85"]
-[ext_resource type="AudioStream" uid="uid://dpf58re6ghr5q" path="res://Assets/Sound Effects/Flytrap_Chomp.mp3" id="4_7ebea"]
+[ext_resource type="AudioStream" uid="uid://dsv5l1g3dm50d" path="res://Assets/Sound Effects/Flytrap_Chomp.mp3" id="4_7ebea"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjugw"]
 

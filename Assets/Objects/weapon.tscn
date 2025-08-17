@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bil56epgfabfd"]
+[gd_scene load_steps=6 format=3 uid="uid://de87w3gmgvshg"]
 
 [ext_resource type="Script" uid="uid://caie21x1ydqeu" path="res://Assets/Scripts/weapon.gd" id="1_s50tw"]
-[ext_resource type="AudioStream" uid="uid://d3vu0rtrov03k" path="res://Assets/Sound Effects/Splat.mp3" id="2_ii4p3"]
-[ext_resource type="Texture2D" uid="uid://3vqvfgyt3s5u" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="3_gxtdp"]
+[ext_resource type="AudioStream" uid="uid://dc16lft1vdl34" path="res://Assets/Sound Effects/Splat.mp3" id="2_ii4p3"]
+[ext_resource type="Texture2D" uid="uid://31dxn14cn0fm" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="3_gxtdp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ii4p3"]
 

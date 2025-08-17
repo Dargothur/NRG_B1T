@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://c5okwluexhy7o" path="res://Assets/SpriteFrames/sprite_frames_sprout.tres" id="2_ojd4l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_06pid"]
-radius = 64.0
+radius = 50.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvfm2"]
 bg_color = Color(0, 0, 0, 1)
