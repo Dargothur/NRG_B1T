@@ -75,6 +75,6 @@ func _play_coin_grab() -> void:
 	$Coin_Grab.play()
 
 func _play_coin_banked() -> void:
-	$Coin_Recieved.volume_db = randf_range(-2.0, 1.0)
+	$Coin_Recieved.volume_db = randf_range(-20.0, -15.0)
 	$Coin_Recieved.pitch_scale = randf_range(1.0, 1.1)
 	$Coin_Recieved.play()
