@@ -26,7 +26,7 @@ sprite_frames = ExtResource("2_nyhc2")
 autoplay = "default"
 frame_progress = 0.80673
 
-[node name="Coin_Recieved" type="AudioStreamPlayer2D" parent="."]
+[node name="Coin_Received" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_nyhc2")
 bus = &"Sound Effects"
 
@@ -74,3 +74,4 @@ scale_amount_curve = SubResource("Curve_0mvpx")
 stream = ExtResource("5_0mvpx")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="finished" from="Coin_Received" to="." method="_on_coin_received_finished"]

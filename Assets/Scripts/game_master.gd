@@ -27,6 +27,17 @@ var weapon = null
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
-		print("esc pressed")
 		current_tool = Tool.NONE
 		Input.set_custom_mouse_cursor(null)
+		
+func reset() -> void:
+	player_currency = 10
+	player_label_position = null
+	current_tool = Tool.NONE
+	in_garden = false
+	weapon_lv = 1.0
+	watering_lv = 1.0
+	watering_upgrade_cost = 100
+	weapon_upgrade_cost = 100
+	watering_can = null
+	weapon = null

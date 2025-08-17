@@ -37,9 +37,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		clicked = true
 		get_viewport().set_input_as_handled()
 
-func _on_audio_stream_player_2d_finished() -> void:
-	self.queue_free()
-
 func _physics_process(delta: float) -> void:
 	if(clicked):
 		speed = 600.0
@@ -78,3 +75,6 @@ func _play_coin_banked() -> void:
 	$Coin_Recieved.volume_db = randf_range(-20.0, -15.0)
 	$Coin_Recieved.pitch_scale = randf_range(1.0, 1.1)
 	$Coin_Recieved.play()
+
+func _on_coin_received_finished() -> void:
+	self.queue_free()
