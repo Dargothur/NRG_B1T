@@ -33,6 +33,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released() and !clicked:
 		starting_position = $".".global_position
 		$Small_Sparkle.emitting = true
+		_play_coin_grab()
 		clicked = true
 		get_viewport().set_input_as_handled()
 
@@ -42,18 +43,16 @@ func _on_audio_stream_player_2d_finished() -> void:
 func _physics_process(delta: float) -> void:
 	if(clicked):
 		$CollisionShape2D.disabled = true
-		if(t < 1.0): 
-			t += delta * 0.4
-		else:
+		if(global_position == GameMaster.player_label_position): 
 			trigger_sound = true
-		$".".global_position = starting_position.lerp(GameMaster.player_label_position, t)
+		global_position = global_position.move_toward(GameMaster.player_label_position, speed * delta)
 	else:
 		global_position = global_position.move_toward(drop_spot, speed * delta)
 		
 	if(trigger_sound):
 		clicked = false
 		GameMaster.player_currency += coin_value
-		$AudioStreamPlayer2D.play()
+		_play_coin_banked()
 		$Flower_Sparkle.amount = coin_value * 3
 		$Flower_Sparkle.emitting = true
 		$Small_Sparkle.emitting = true
@@ -64,3 +63,17 @@ func _physics_process(delta: float) -> void:
 func set_drop_spot(drop_spot_target):
 	drop_spot = drop_spot_target
 	
+func set_click(click_pos):
+	$Small_Sparkle.emitting = true
+	starting_position = click_pos
+	clicked = true
+
+func _play_coin_grab() -> void:
+	$Coin_Grab.volume_db = randf_range(-2.0, 1.0)
+	$Coin_Grab.pitch_scale = randf_range(3.0, 4.0)
+	$Coin_Grab.play()
+
+func _play_coin_banked() -> void:
+	$Coin_Recieved.volume_db = randf_range(-2.0, 1.0)
+	$Coin_Recieved.pitch_scale = randf_range(1.0, 1.1)
+	$Coin_Recieved.play()

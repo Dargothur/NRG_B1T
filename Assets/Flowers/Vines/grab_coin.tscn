@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://co241euqo2bua"]
 
-[ext_resource type="SpriteFrames" uid="uid://bo2b1lfwstki4" path="res://Assets/SpriteFrames/sprite_frames_tentacle.tres" id="1_mmjm1"]
+[ext_resource type="SpriteFrames" uid="uid://clgurdejiqua7" path="res://Assets/SpriteFrames/sprite_frames_tentacle.tres" id="1_mmjm1"]
 
 [node name="GrabCoin" type="AnimatedSprite2D"]
 texture_filter = 1

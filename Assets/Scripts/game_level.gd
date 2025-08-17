@@ -25,9 +25,9 @@ func _on_wave_timer_timeout() -> void:
 				var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
 				var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
 				var rand_point = Vector2(x,y)
-				var new_aphid = aphid_scene.instantiate()
-				add_child(new_aphid)
-				new_aphid.setup(rand_point)
+				#var new_aphid = aphid_scene.instantiate()
+				#add_child(new_aphid)
+				#new_aphid.setup(rand_point)
 		1:
 			pass
 		2:

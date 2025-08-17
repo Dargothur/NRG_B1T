@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://uv6jlrpf1ef4"]
+[gd_scene load_steps=7 format=3 uid="uid://uv6jlrpf1ef4"]
 
 [ext_resource type="Script" uid="uid://ch1y8suqoqwtc" path="res://Assets/Scripts/vines.gd" id="1_55dux"]
 [ext_resource type="SpriteFrames" uid="uid://bl350dvbprcik" path="res://Assets/SpriteFrames/sprite_frames_vines.tres" id="2_gdf6g"]
 [ext_resource type="PackedScene" uid="uid://co241euqo2bua" path="res://Assets/Flowers/Vines/grab_coin.tscn" id="2_uog6j"]
-[ext_resource type="SpriteFrames" uid="uid://bo2b1lfwstki4" path="res://Assets/SpriteFrames/sprite_frames_tentacle.tres" id="4_imocg"]
+[ext_resource type="SpriteFrames" uid="uid://clgurdejiqua7" path="res://Assets/SpriteFrames/sprite_frames_tentacle.tres" id="4_imocg"]
+[ext_resource type="AudioStream" uid="uid://bbqcrrfmlgfub" path="res://Assets/Sound Effects/Tent_Growth.mp3" id="5_gu2bj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_55dux"]
 
 [node name="Vines" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_55dux")
 tent_grab = ExtResource("2_uog6j")
 
@@ -24,5 +26,8 @@ autostart = true
 [node name="Tentacle" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = ExtResource("4_imocg")
+
+[node name="Tentacle_Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_gu2bj")
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
