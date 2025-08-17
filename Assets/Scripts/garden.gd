@@ -114,6 +114,7 @@ func _process(delta: float) -> void:
 					GameMaster.player_currency -= vines_cost
 			GameMaster.Tool.SPRINKLER:
 				if(GameMaster.player_currency >= sprinkler_cost):
+					_play_sprinkler_sound()
 					var scnSprinkler = load("res://Assets/Objects/sprinkler.tscn")
 					var new_sprinker = scnSprinkler.instantiate()
 					add_child(new_sprinker)
@@ -131,3 +132,7 @@ func _play_plant_sound() -> void:
 	$planting_audio.pitch_scale = randf_range(1.0, 2.0)
 	$planting_audio.volume_db = randf_range(-6.0, -5.0)
 	$planting_audio.play()
+func _play_sprinkler_sound() -> void:
+	$sprinkler_audio.pitch_scale = randf_range(1.0, 2.0)
+	$sprinkler_audio.volume_db = randf_range(-6.0, -5.0)
+	$sprinkler_audio.play()
