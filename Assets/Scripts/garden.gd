@@ -9,7 +9,17 @@ var sprinker = load("res://Assets/Images/Sprinkler/icnSprinkler.png")
 var watering_can = load("res://Assets/Images/Watering Can/Watering-Can.png")
 var bug_killer = load("res://Assets/Images/Fly Swatter/Fly Swatter.png")
 
+var daisy_cost = 3
+var freesia_cost = 30
+var poppy_cost = 50
+var rose_cost = 100
+var vines_cost = 100
+var sprinkler_cost = 100
+
 var spawn_ready = true
+var tool_cost
+var scnLoad
+var flower_type = null
 
 func _on_mouse_entered() -> void:
 	GameMaster.in_garden = true
@@ -38,10 +48,11 @@ func _on_mouse_exited() -> void:
 	
 	
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("use_tool") and GameMaster.in_garden and spawn_ready:
+	if Input.is_action_just_pressed("use_tool") and GameMaster.in_garden and spawn_ready:
 		match GameMaster.current_tool:
 			GameMaster.Tool.DAISY:
 				if(GameMaster.player_currency >= 3):
+					_play_plant_sound()
 					var scnFlower = load("res://Assets/Objects/flower.tscn")
 					var new_flower = scnFlower.instantiate()
 					new_flower.setup(new_flower.FlowerType.DAISY)
@@ -51,6 +62,7 @@ func _process(delta: float) -> void:
 					GameMaster.player_currency -= 3
 			GameMaster.Tool.FREESIA:
 				if(GameMaster.player_currency >= 30):
+					_play_plant_sound()
 					var scnFlower = load("res://Assets/Objects/flower.tscn")
 					var new_flower = scnFlower.instantiate()
 					new_flower.setup(new_flower.FlowerType.FREESIA)
@@ -60,6 +72,7 @@ func _process(delta: float) -> void:
 					GameMaster.player_currency -= 30
 			GameMaster.Tool.POPPY:
 				if(GameMaster.player_currency >= 50):
+					_play_plant_sound()
 					var scnFlower = load("res://Assets/Objects/flower.tscn")
 					var new_flower = scnFlower.instantiate()
 					new_flower.setup(new_flower.FlowerType.POPPY)
@@ -69,6 +82,7 @@ func _process(delta: float) -> void:
 					GameMaster.player_currency -= 50
 			GameMaster.Tool.ROSE:
 				if(GameMaster.player_currency >= 100):
+					_play_plant_sound()
 					var scnFlower = load("res://Assets/Objects/flower.tscn")
 					var new_flower = scnFlower.instantiate()
 					new_flower.setup(new_flower.FlowerType.ROSE)
@@ -78,6 +92,7 @@ func _process(delta: float) -> void:
 					GameMaster.player_currency -= 100
 			GameMaster.Tool.VINES:
 				if(GameMaster.player_currency >= 100):
+					_play_plant_sound()
 					var scnVines = load("res://Assets/Objects/vines.tscn")
 					var new_vines = scnVines.instantiate()
 					add_child(new_vines)
@@ -99,3 +114,7 @@ func _process(delta: float) -> void:
 
 func _on_spawn_timer_timeout() -> void:
 	spawn_ready = true
+func _play_plant_sound() -> void:
+	$planting_audio.pitch_scale = randf_range(1.0, 2.0)
+	$planting_audio.volume_db = randf_range(-2.0, 0)
+	$planting_audio.play()

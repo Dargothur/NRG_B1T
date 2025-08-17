@@ -1,12 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxoyqgmv3ribv"]
+[gd_scene load_steps=7 format=3 uid="uid://bxoyqgmv3ribv"]
 
 [ext_resource type="Script" uid="uid://diohtae6y6xxf" path="res://Assets/Scripts/watering_can.gd" id="1_xcyei"]
+[ext_resource type="Texture2D" uid="uid://3vqvfgyt3s5u" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="2_aigni"]
+[ext_resource type="AudioStream" uid="uid://bj6pwpph2v5qk" path="res://Assets/Sound Effects/watering-with-a-watering-can-39121.mp3" id="3_wh2hq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aigni"]
 radius = 16.0
+
+[sub_resource type="Curve" id="Curve_wh2hq"]
+_data = [Vector2(0, 0.213483), 0.0, 0.0, 0, 0, Vector2(1, 0.202247), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_vn82b"]
+_data = [Vector2(0.164773, 0.168539), 0.0, 0.0, 0, 0, Vector2(1, 0.325843), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="watering_can" type="Area2D"]
 script = ExtResource("1_xcyei")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_aigni")
+
+[node name="Sprinkle Effect" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 8)
+emitting = false
+amount = 10
+texture = ExtResource("2_aigni")
+lifetime = 0.35
+one_shot = true
+explosiveness = 0.09
+randomness = 0.25
+direction = Vector2(0, 1)
+spread = 23.64
+gravity = Vector2(0, 100)
+initial_velocity_min = 126.11
+initial_velocity_max = 126.11
+scale_amount_min = 15.0
+scale_amount_max = 30.0
+split_scale = true
+scale_curve_x = SubResource("Curve_wh2hq")
+scale_curve_y = SubResource("Curve_vn82b")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wh2hq")
+volume_db = -11.926
+pitch_scale = 1.68

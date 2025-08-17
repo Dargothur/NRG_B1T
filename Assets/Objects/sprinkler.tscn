@@ -15,6 +15,7 @@ _data = [Vector2(0.164773, 0.168539), 0.0, 0.0, 0, 0, Vector2(1, 0.269663), 0.0,
 point_count = 2
 
 [node name="Sprinkler" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_1c4c2")
 
 [node name="Sprinkler_Area" type="CollisionShape2D" parent="."]
