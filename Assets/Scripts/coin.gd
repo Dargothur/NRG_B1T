@@ -42,6 +42,7 @@ func _on_audio_stream_player_2d_finished() -> void:
 
 func _physics_process(delta: float) -> void:
 	if(clicked):
+		speed = 600.0
 		$CollisionShape2D.disabled = true
 		if(global_position == GameMaster.player_label_position): 
 			trigger_sound = true

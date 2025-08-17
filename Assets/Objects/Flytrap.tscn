@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0ibkc4gyl8wa"]
+[gd_scene load_steps=5 format=3 uid="uid://fitbbchk6dk7"]
 
-[ext_resource type="SpriteFrames" uid="uid://cdmhq4mh85kma" path="res://Assets/SpriteFrames/sprite_frames_flytrap.tres" id="1_35xvj"]
+[ext_resource type="SpriteFrames" uid="uid://bc5h5bqqqihcu" path="res://Assets/SpriteFrames/sprite_frames_flytrap.tres" id="1_35xvj"]
 [ext_resource type="Script" path="res://Assets/Scripts/flytrap.gd" id="1_kjugw"]
-[ext_resource type="SpriteFrames" uid="uid://doprvf02sd84g" path="res://Assets/SpriteFrames/new_sprite_closed_flytrap.tres" id="3_s3x85"]
+[ext_resource type="SpriteFrames" uid="uid://bvwrfuheuej7i" path="res://Assets/SpriteFrames/new_sprite_closed_flytrap.tres" id="3_s3x85"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjugw"]
 
 [node name="Flytrap" type="Area2D"]
 texture_filter = 1
+scale = Vector2(2, 2)
 script = ExtResource("1_kjugw")
 
 [node name="FlytrapAni" type="AnimatedSprite2D" parent="."]

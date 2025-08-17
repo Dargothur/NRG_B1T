@@ -2,9 +2,9 @@ extends Area2D
 
 const bug = preload("res://Assets/Scripts/bug.gd")
 
-var lvl = 1
+var lvl = GameMaster.weapon_lv
 var weapon_ready = true
-var damage_value = 10.0
+var damage_value = 10.0 * lvl
 
 func _process(delta: float) -> void:
 	global_position = get_global_mouse_position()
@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		for obj in objects:
 			if(obj is bug):
 				obj.take_damage(damage_value * lvl)
-				print("SPLAT!")
+				$AudioStreamPlayer2D.play()
 				weapon_ready = false
 				$WeaponCD.start()
 
