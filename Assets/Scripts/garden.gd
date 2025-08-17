@@ -116,5 +116,5 @@ func _on_spawn_timer_timeout() -> void:
 	spawn_ready = true
 func _play_plant_sound() -> void:
 	$planting_audio.pitch_scale = randf_range(1.0, 2.0)
-	$planting_audio.volume_db = randf_range(-2.0, 0)
+	$planting_audio.volume_db = randf_range(-6.0, -5.0)
 	$planting_audio.play()
