@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2qn1eq6o0a2c"]
+
+[ext_resource type="Texture2D" uid="uid://cx3kwdy702o60" path="res://Assets/Images/Decals/Bumps.png" id="1_q1fcc"]
+
+[node name="Bumps" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_q1fcc")

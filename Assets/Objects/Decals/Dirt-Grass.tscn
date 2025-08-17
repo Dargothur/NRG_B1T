@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca6n6ypgd6mm"]
+
+[ext_resource type="Texture2D" uid="uid://c34i6jf0apkxt" path="res://Assets/Images/Decals/Dirt-Grass.png" id="1_ox2oh"]
+
+[node name="Rock3" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_ox2oh")

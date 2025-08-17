@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=27 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
 [ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
 [ext_resource type="AudioStream" uid="uid://brsph1qv6xr7x" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
+[ext_resource type="PackedScene" uid="uid://bd8gkrjcg1vos" path="res://Assets/Objects/Decals/details.tscn" id="17_itldg"]
 [ext_resource type="Texture2D" uid="uid://ca6kky6b40h46" path="res://Assets/Images/Fly Swatter/Fly Swatter Icn.png" id="18_gmuxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
@@ -376,6 +377,9 @@ stream = ExtResource("15_gmuxe")
 
 [node name="sprinkler_audio" type="AudioStreamPlayer2D" parent="Garden"]
 stream = ExtResource("16_680e6")
+
+[node name="Details" parent="Garden" instance=ExtResource("17_itldg")]
+position = Vector2(-13, -140)
 
 [node name="Toolbox" type="VBoxContainer" parent="."]
 offset_left = 1180.0

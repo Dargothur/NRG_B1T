@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://w3imkpopos3t"]
+
+[ext_resource type="Texture2D" uid="uid://c3bf5a5wfrodb" path="res://Assets/Images/Decals/Rock1.png" id="1_hp5nk"]
+
+[node name="Rock1" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_hp5nk")
