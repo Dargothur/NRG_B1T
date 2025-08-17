@@ -228,13 +228,13 @@ expand_icon = true
 script = ExtResource("3_a8d8m")
 toolType = 4
 
-[node name="MarginContainer8" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrFlytrap" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer8"]
+[node name="btnFlytrap" type="Button" parent="HBoxContainer/cntrFlytrap"]
 texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -243,6 +243,8 @@ size_flags_vertical = 4
 icon = ExtResource("8_otl2i")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("3_a8d8m")
+toolType = 6
 
 [node name="cntrVines" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -448,6 +450,9 @@ autostart = true
 [connection signal="mouse_entered" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrFlytrap/btnFlytrap" to="HBoxContainer/cntrFlytrap/btnFlytrap" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrFlytrap/btnFlytrap" to="HBoxContainer/cntrFlytrap/btnFlytrap" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrFlytrap/btnFlytrap" to="HBoxContainer/cntrFlytrap/btnFlytrap" method="_on_pressed"]
 [connection signal="mouse_entered" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_pressed"]
