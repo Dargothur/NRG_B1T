@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjpqg2ieq35km"]
+
+[ext_resource type="Texture2D" uid="uid://js68x8nev6gx" path="res://Assets/Images/Particle/Sparkle-Particle.png" id="1_y8212"]
+[ext_resource type="Texture2D" uid="uid://3vqvfgyt3s5u" path="res://Assets/Images/Particle/Sprinkle-Water.png" id="2_731tb"]
+
+[sub_resource type="Curve" id="Curve_l8pwg"]
+_data = [Vector2(0, 0.280899), 0.0, 0.0, 0, 0, Vector2(0.994318, 0.820225), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Fly-smack-particle" type="CPUParticles2D"]
+texture_filter = 1
+emitting = false
+amount = 20
+texture = ExtResource("1_y8212")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.24
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 69.7
+initial_velocity_max = 190.91
+angular_velocity_max = 28.0
+damping_max = 5.051
+angle_min = -116.4
+angle_max = 160.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+
+[node name="small-particle" type="CPUParticles2D" parent="."]
+emitting = false
+texture = ExtResource("2_731tb")
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.24
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 49.49
+initial_velocity_max = 130.3
+angle_min = -40.0
+angle_max = 40.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+split_scale = true
+scale_curve_x = null
+scale_curve_y = SubResource("Curve_l8pwg")

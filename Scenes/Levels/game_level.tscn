@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can.png" id="13_wwnap"]
 [ext_resource type="Script" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
 [ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
-[ext_resource type="Script" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
-[ext_resource type="Texture2D" uid="uid://by5rtwb00ofja" path="res://Assets/Images/Fly Swatter/Fly Swatter.png" id="16_1o3sn"]
+[ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
+[ext_resource type="Texture2D" uid="uid://ca6kky6b40h46" path="res://Assets/Images/Fly Swatter/Fly Swatter Icn.png" id="18_gmuxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
 bg_color = Color(0, 0, 0, 1)
@@ -408,7 +408,7 @@ custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-icon = ExtResource("16_1o3sn")
+icon = ExtResource("18_gmuxe")
 autowrap_mode = 2
 icon_alignment = 1
 expand_icon = true
