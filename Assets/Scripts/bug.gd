@@ -55,12 +55,12 @@ func setup(bug_type, new_position):
 			$AnimatedSprite2D.sprite_frames = aphid_sprites
 		BugType.CATERPILLAR:
 			$AnimatedSprite2D.sprite_frames = caterpillar_sprites
-			health = 200.0
+			health = 300.0
 			speed = 100.0
 			damage_value = 50
 		BugType.GRASSHOPPER:
 			$AnimatedSprite2D.sprite_frames = grasshopper_sprites
-			health = 300.0
+			health = 400.0
 			speed = 300.0
 			damage_value = 100
 	global_position = new_position
@@ -75,6 +75,11 @@ func _on_bite_cooldown_timeout() -> void:
 	else:
 		$BiteCooldown.stop()
 
+func take_damage(damage_amt):
+	health -= damage_amt
+	if health <= 0:
+		queue_free()
+		
 func _play_chomp_sound() -> void:
 	var randNum = randi_range(0, 1)
 	match randNum:

@@ -23,42 +23,37 @@ func _process(delta):
 		if $WaveTimer.is_stopped():
 			$WaveTimer.start()
 	elif game_started:
-		print("Game over!")
+		$lblGameOver.visible = true
+		$btnReturnToMainMenu.visibile = true
 	
 func _on_wave_timer_timeout() -> void:
-	match currentWave:
-		0:
-			for n in 5:
-				var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
-				var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
-				var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
-				var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
-				var rand_point = Vector2(x,y)
-				var new_aphid = bug_scene.instantiate()
-				add_child(new_aphid)
-				new_aphid.setup(new_aphid.BugType.APHID, rand_point)
-		1:
-			for n in 4:
-				var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
-				var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
-				var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
-				var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
-				var rand_point = Vector2(x,y)
-				var new_caterpillar = bug_scene.instantiate()
-				add_child(new_caterpillar)
-				new_caterpillar.setup(new_caterpillar.BugType.CATERPILLAR, rand_point)
-		2:
-			for n in 3:
-				var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
-				var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
-				var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
-				var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
-				var rand_point = Vector2(x,y)
-				var new_grasshopper = bug_scene.instantiate()
-				add_child(new_grasshopper)
-				new_grasshopper.setup(new_grasshopper.BugType.GRASSHOPPER, rand_point)
-		3:
-			pass
-		4:
-			pass
+	for n in randi_range(1,currentWave + 1):
+		var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
+		var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
+		var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
+		var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
+		var rand_point = Vector2(x,y)
+		var new_aphid = bug_scene.instantiate()
+		add_child(new_aphid)
+		new_aphid.setup(new_aphid.BugType.APHID, rand_point)
+	if currentWave >= 1:
+		for n in randi_range(1,currentWave + 1):
+			var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
+			var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
+			var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
+			var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
+			var rand_point = Vector2(x,y)
+			var new_caterpillar = bug_scene.instantiate()
+			add_child(new_caterpillar)
+			new_caterpillar.setup(new_caterpillar.BugType.CATERPILLAR, rand_point)
+	if currentWave >= 2:
+		for n in randi_range(1,currentWave + 1):
+			var spawn_to_use : StaticBody2D = spawn_areas[randi_range(0,2)]
+			var rect : Rect2 = spawn_to_use.get_child(0).shape.get_rect()
+			var x = randi_range(spawn_to_use.global_position.x, spawn_to_use.global_position.x+rect.size.x)
+			var y = randi_range(spawn_to_use.global_position.y, spawn_to_use.global_position.y+rect.size.y)
+			var rand_point = Vector2(x,y)
+			var new_grasshopper = bug_scene.instantiate()
+			add_child(new_grasshopper)
+			new_grasshopper.setup(new_grasshopper.BugType.GRASSHOPPER, rand_point)
 	currentWave += 1

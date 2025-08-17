@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://c5okwluexhy7o"]
 
-[ext_resource type="Texture2D" uid="uid://ovypof05hvbw" path="res://Assets/Images/Flowers/Sprout/Sprout-Sheet.png" id="1_glrgn"]
-[ext_resource type="Texture2D" uid="uid://vukjqtggfqpu" path="res://Assets/Images/Flowers/Sprout/Withered-Sprout.png" id="2_0h71u"]
+[ext_resource type="Texture2D" uid="uid://coq2uplk0q67x" path="res://Assets/Images/Flowers/Sprout/Sprout-Sheet.png" id="1_glrgn"]
+[ext_resource type="Texture2D" uid="uid://mx8srkmdxn00" path="res://Assets/Images/Flowers/Sprout/Withered-Sprout.png" id="2_0h71u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0h71u"]
 atlas = ExtResource("1_glrgn")

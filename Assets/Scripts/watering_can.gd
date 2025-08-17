@@ -2,13 +2,14 @@ extends Area2D
 
 const flower = preload("res://Assets/Scripts/flower.gd")
 
-var lvl = 1
+var lvl = GameMaster.watering_lv
 var sprinkles = 10
 var lifeTime = .33
 
 func _ready():
 	$"Sprinkle Effect".amount = sprinkles * lvl
 	$"Sprinkle Effect".lifetime = lifeTime * lvl
+	scale = Vector2(lvl,lvl)
 
 func _process(delta: float) -> void:
 	global_position = get_global_mouse_position()

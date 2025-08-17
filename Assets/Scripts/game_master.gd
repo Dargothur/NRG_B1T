@@ -13,10 +13,14 @@ enum Tool {
 	BUG_KILLER
 }
 
-var player_currency = 1000
+var player_currency = 10
 var player_label_position = null
 var current_tool = Tool.NONE
 var in_garden = false
+var weapon_lv = 1.0
+var watering_lv = 1.0
+var watering_upgrade_cost = 100
+var weapon_upgrade_cost = 100
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):

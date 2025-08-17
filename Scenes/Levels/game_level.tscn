@@ -1,26 +1,32 @@
-[gd_scene load_steps=27 format=3 uid="uid://b12gq7t7al4t8"]
+[gd_scene load_steps=33 format=3 uid="uid://b12gq7t7al4t8"]
 
 [ext_resource type="Script" uid="uid://vbmevspf4ide" path="res://Assets/Scripts/game_level.gd" id="1_0rvva"]
 [ext_resource type="Theme" uid="uid://dh30geagbyidw" path="res://Assets/Themes/theme_game_ui.tres" id="2_0rvva"]
-[ext_resource type="Texture2D" uid="uid://dgno1vdrodbrd" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
-[ext_resource type="Texture2D" uid="uid://u6n3fj1gybd8" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
+[ext_resource type="Texture2D" uid="uid://8wo20jbalqux" path="res://Assets/Images/Currency/Dollar/Dollar.png" id="3_0rvva"]
+[ext_resource type="Texture2D" uid="uid://b52l3de3iq0kw" path="res://Assets/Images/Flowers/Daisy/icnDaisy.png" id="3_06pid"]
 [ext_resource type="Script" uid="uid://5w8ru62gu430" path="res://Assets/Scripts/btn_action.gd" id="3_a8d8m"]
-[ext_resource type="Texture2D" uid="uid://blny14psnioyw" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
-[ext_resource type="Texture2D" uid="uid://vyv2knqcjd2o" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
-[ext_resource type="Texture2D" uid="uid://bwu66txfvlpa3" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
-[ext_resource type="Texture2D" uid="uid://cfmpfoophgn14" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
-[ext_resource type="Texture2D" uid="uid://21qwiqbdlpu5" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
-[ext_resource type="Texture2D" uid="uid://bhsv7sjnibtha" path="res://Assets/Images/Sprinkler/icnSprinkler.png" id="10_1o3sn"]
-[ext_resource type="Texture2D" uid="uid://bcb7nm6cjb6ix" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
+[ext_resource type="Texture2D" uid="uid://basgo31yc84js" path="res://Assets/Images/Flowers/Freesia/icnFreesia.png" id="5_0ohik"]
+[ext_resource type="Texture2D" uid="uid://bj5o12kn1imqr" path="res://Assets/Images/Flowers/Poppy/icnPoppy.png" id="6_jsuo6"]
+[ext_resource type="Texture2D" uid="uid://xo5lr0oquo0d" path="res://Assets/Images/Flowers/Rose/icnRose.png" id="7_hyqiq"]
+[ext_resource type="Texture2D" uid="uid://dnl2l5gw5qikv" path="res://Assets/Images/Flowers/Fly Trap/icnFlyTrap.png" id="8_otl2i"]
+[ext_resource type="Script" uid="uid://d0fef86frne4g" path="res://Assets/Scripts/btn_fly_trap.gd" id="9_680e6"]
+[ext_resource type="Texture2D" uid="uid://bk0yc54yr0e5c" path="res://Assets/Images/Flowers/Vines/icnVines.png" id="9_l5ayb"]
+[ext_resource type="Texture2D" uid="uid://cm17mi7jne8s5" path="res://Assets/Images/Sprinkler/icnSprinkler.png" id="10_1o3sn"]
+[ext_resource type="Texture2D" uid="uid://dlay0xxbmeu03" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
 [ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
-[ext_resource type="Texture2D" uid="uid://bgr18ojbnpfk5" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
-[ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
-[ext_resource type="Script" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
-[ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
+[ext_resource type="Texture2D" uid="uid://djb6yd2o6071l" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
+[ext_resource type="Script" uid="uid://dg2yih0ydbb74" path="res://Assets/Scripts/btn_watering_can_upgrade.gd" id="12_pe30b"]
+[ext_resource type="Texture2D" uid="uid://id1q74a2a6f0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
+[ext_resource type="Script" uid="uid://cerl101utitav" path="res://Assets/Scripts/btn_bug_killer_upgrade.gd" id="14_d3gwg"]
+[ext_resource type="Script" uid="uid://8e57bhvgsrop" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
+[ext_resource type="AudioStream" uid="uid://c766jb2yxdmvm" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
 [ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
-[ext_resource type="AudioStream" uid="uid://brsph1qv6xr7x" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
+[ext_resource type="AudioStream" uid="uid://c58jhvx7h5oeu" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
+[ext_resource type="Script" uid="uid://cnc87jbrejnm8" path="res://Assets/Scripts/btn_victory.gd" id="16_vkhlp"]
 [ext_resource type="PackedScene" uid="uid://bd8gkrjcg1vos" path="res://Assets/Objects/Decals/details.tscn" id="17_itldg"]
-[ext_resource type="Texture2D" uid="uid://ca6kky6b40h46" path="res://Assets/Images/Fly Swatter/Fly Swatter Icn.png" id="18_gmuxe"]
+[ext_resource type="Texture2D" uid="uid://lk17wff2lctc" path="res://Assets/Images/Fly Swatter/Fly Swatter Icn.png" id="18_gmuxe"]
+[ext_resource type="AudioStream" uid="uid://de7pd2hmoqnq3" path="res://Assets/Sound Effects/nature-99499.mp3" id="24_d3gwg"]
+[ext_resource type="Script" uid="uid://yfu7ka6xlj7u" path="res://Assets/Scripts/btn_return_to_main_menu.gd" id="26_k17xk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k18i5"]
 bg_color = Color(0, 0, 0, 1)
@@ -45,110 +51,122 @@ script = ExtResource("1_0rvva")
 [node name="lblDaisyPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 85.0
+offset_left = 26.0
 offset_top = 661.0
-offset_right = 137.0
+offset_right = 78.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$3"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblFreesiaPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 187.0
+offset_left = 129.0
 offset_top = 661.0
-offset_right = 264.0
+offset_right = 206.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$30"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblPoppyPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 302.0
+offset_left = 244.0
 offset_top = 661.0
-offset_right = 379.0
+offset_right = 321.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$50"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblRosePrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 408.0
+offset_left = 350.0
 offset_top = 661.0
-offset_right = 502.0
+offset_right = 444.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$100"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblFlyTrapPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 524.0
+offset_left = 467.0
 offset_top = 661.0
-offset_right = 618.0
+offset_right = 561.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$100"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblVinesPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 638.0
+offset_left = 580.0
 offset_top = 661.0
-offset_right = 732.0
+offset_right = 674.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$100"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblSprinklerPrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 753.0
+offset_left = 695.0
 offset_top = 661.0
-offset_right = 847.0
+offset_right = 789.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$100"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblWCUpgradePrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 868.0
+offset_left = 812.0
 offset_top = 661.0
-offset_right = 962.0
+offset_right = 906.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$100"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="lblBKUpgradePrice" type="Label" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = 983.0
+offset_left = 925.0
 offset_top = 661.0
-offset_right = 1077.0
+offset_right = 1019.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
 text = "$100"
-horizontal_alignment = 2
+horizontal_alignment = 1
+
+[node name="lblVictoryPrice" type="Label" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 1028.0
+offset_top = 661.0
+offset_right = 1148.0
+offset_bottom = 695.0
+mouse_filter = 1
+theme = ExtResource("2_0rvva")
+text = "$9999"
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_top = 570.0
@@ -230,13 +248,13 @@ expand_icon = true
 script = ExtResource("3_a8d8m")
 toolType = 4
 
-[node name="cntrFlytrap" type="MarginContainer" parent="HBoxContainer"]
+[node name="cntrFlyTrap" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="btnFlytrap" type="Button" parent="HBoxContainer/cntrFlytrap"]
+[node name="btnFlyTrap" type="Button" parent="HBoxContainer/cntrFlyTrap"]
 texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -245,8 +263,7 @@ size_flags_vertical = 4
 icon = ExtResource("8_otl2i")
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("3_a8d8m")
-toolType = 6
+script = ExtResource("9_680e6")
 
 [node name="cntrVines" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -301,6 +318,7 @@ icon = ExtResource("10_hyqiq")
 autowrap_mode = 2
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("12_pe30b")
 
 [node name="cntrBugKillerUpgrade" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -318,6 +336,25 @@ icon = ExtResource("11_svdjn")
 autowrap_mode = 2
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("14_d3gwg")
+
+[node name="cntrVictory" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="btnVictory" type="Button" parent="HBoxContainer/cntrVictory"]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Victory"
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("16_vkhlp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 1130.0
@@ -443,7 +480,52 @@ position = Vector2(1350, 360)
 shape = SubResource("RectangleShape2D_r1fhj")
 
 [node name="WaveTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 180.0
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_d3gwg")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="lblGameOver" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_top = 294.0
+offset_right = 1280.0
+offset_bottom = 426.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnReturnToMainMenu" type="Button" parent="."]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(500, 50)
+offset_left = 390.0
+offset_top = 429.97
+offset_right = 890.0
+offset_bottom = 479.97
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_0rvva")
+text = "Return to main menu"
+script = ExtResource("26_k17xk")
+
+[node name="lblVictory" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_top = 294.0
+offset_right = 1280.0
+offset_bottom = 426.0
+theme = ExtResource("2_0rvva")
+theme_override_font_sizes/font_size = 100
+text = "VICTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrDaisy/btnDaisy" to="HBoxContainer/cntrDaisy/btnDaisy" method="_on_mouse_exited"]
@@ -457,18 +539,28 @@ wait_time = 10.0
 [connection signal="mouse_entered" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrRose/btnRose" to="HBoxContainer/cntrRose/btnRose" method="_on_pressed"]
-[connection signal="mouse_entered" from="HBoxContainer/cntrFlytrap/btnFlytrap" to="HBoxContainer/cntrFlytrap/btnFlytrap" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/cntrFlytrap/btnFlytrap" to="HBoxContainer/cntrFlytrap/btnFlytrap" method="_on_mouse_exited"]
-[connection signal="pressed" from="HBoxContainer/cntrFlytrap/btnFlytrap" to="HBoxContainer/cntrFlytrap/btnFlytrap" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrFlyTrap/btnFlyTrap" to="HBoxContainer/cntrFlyTrap/btnFlyTrap" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrFlyTrap/btnFlyTrap" to="HBoxContainer/cntrFlyTrap/btnFlyTrap" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrFlyTrap/btnFlyTrap" to="HBoxContainer/cntrFlyTrap/btnFlyTrap" method="_on_pressed"]
 [connection signal="mouse_entered" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrVines/btnVines" to="HBoxContainer/cntrVines/btnVines" method="_on_pressed"]
 [connection signal="mouse_entered" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/cntrSprinkler/btnSprinkler" to="HBoxContainer/cntrSprinkler/btnSprinkler" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrWateringCanUpgrade/btnWateringCanUpgrade" to="HBoxContainer/cntrWateringCanUpgrade/btnWateringCanUpgrade" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrWateringCanUpgrade/btnWateringCanUpgrade" to="HBoxContainer/cntrWateringCanUpgrade/btnWateringCanUpgrade" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrWateringCanUpgrade/btnWateringCanUpgrade" to="HBoxContainer/cntrWateringCanUpgrade/btnWateringCanUpgrade" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade" to="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade" to="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade" to="HBoxContainer/cntrBugKillerUpgrade/btnBugKillerUpgrade" method="_on_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/cntrVictory/btnVictory" to="HBoxContainer/cntrVictory/btnVictory" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/cntrVictory/btnVictory" to="HBoxContainer/cntrVictory/btnVictory" method="_on_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/cntrVictory/btnVictory" to="HBoxContainer/cntrVictory/btnVictory" method="_on_pressed"]
 [connection signal="mouse_entered" from="Garden" to="Garden" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Garden" to="Garden" method="_on_mouse_exited"]
 [connection signal="timeout" from="Garden/SpawnTimer" to="Garden" method="_on_spawn_timer_timeout"]
 [connection signal="pressed" from="Toolbox/cntrWateringCan/btnWateringCan" to="Toolbox/cntrWateringCan/btnWateringCan" method="_on_pressed"]
 [connection signal="pressed" from="Toolbox/cntrBugKiller/btnBugKiller" to="Toolbox/cntrBugKiller/btnBugKiller" method="_on_pressed"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
+[connection signal="pressed" from="btnReturnToMainMenu" to="btnReturnToMainMenu" method="_on_pressed"]

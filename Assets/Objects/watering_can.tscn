@@ -46,3 +46,4 @@ scale_curve_y = SubResource("Curve_vn82b")
 stream = ExtResource("3_wh2hq")
 volume_db = -11.926
 pitch_scale = 1.68
+bus = &"Sound Effects"
