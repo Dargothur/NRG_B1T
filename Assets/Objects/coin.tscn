@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bhf7p4v1nbx6h" path="res://Assets/Scripts/coin.gd" id="1_2llng"]
 [ext_resource type="SpriteFrames" uid="uid://b26u8nc0xkvy5" path="res://Assets/SpriteFrames/sprite_frames_1-cent.tres" id="2_nyhc2"]
-[ext_resource type="AudioStream" uid="uid://bimwldcwvsvke" path="res://Assets/Sound Effects/retro-coin-4-236671.mp3" id="3_nyhc2"]
-[ext_resource type="Texture2D" uid="uid://b5ckpbcda5ilv" path="res://Assets/Images/Particle/Sparkle-Particle.png" id="4_ohyys"]
-[ext_resource type="AudioStream" uid="uid://com3grj5t55oa" path="res://Assets/Sound Effects/Coin_Pickup.mp3" id="5_0mvpx"]
+[ext_resource type="AudioStream" uid="uid://c4p80xi33dsub" path="res://Assets/Sound Effects/retro-coin-4-236671.mp3" id="3_nyhc2"]
+[ext_resource type="Texture2D" uid="uid://js68x8nev6gx" path="res://Assets/Images/Particle/Sparkle-Particle.png" id="4_ohyys"]
+[ext_resource type="AudioStream" uid="uid://jnjf1xb617b2" path="res://Assets/Sound Effects/Coin_Pickup.mp3" id="5_0mvpx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ohyys"]
 radius = 16.0

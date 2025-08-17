@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcqc8dg2jds66"]
+
+[ext_resource type="Texture2D" uid="uid://dt28hb4vn2cjt" path="res://Assets/Images/Decals/Weird-Sticks.png" id="1_7kjk6"]
+
+[node name="Weird-Sticks" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_7kjk6")
