@@ -12,3 +12,10 @@ func _process(delta):
 	
 func _button_pressed():
 	get_tree().quit()
+	
+func _on_mouse_entered() -> void:
+	global_position -= Vector2(0,10)
+
+
+func _on_mouse_exited() -> void:
+	global_position += Vector2(0,10)

@@ -1,4 +1,10 @@
-extends AnimatableBody2D
+extends Area2D
+
+enum BugType {
+	APHID,
+	CATERPILLAR,
+	GRASSHOPPER
+}
 
 var flowers
 var target
@@ -6,6 +12,11 @@ var target
 var health = 100.0
 var speed = 200.0
 var bug_ready = false
+var damage_value = 35.0
+
+var aphid_sprites = load("res://Assets/SpriteFrames/sprite_frames_aphid.tres")
+var caterpillar_sprites = load("res://Assets/SpriteFrames/sprite_frames_caterpillar.tres")
+var grasshopper_sprites = load("res://Assets/SpriteFrames/sprite_frames_grasshopper.tres")
 
 func _ready() -> void:
 	flowers = get_tree().get_nodes_in_group("flowers")
@@ -20,10 +31,12 @@ func _physics_process(delta: float) -> void:
 				look_at(target.position)
 			else:
 				flowers.remove_at(idx)
-	elif target != null and bug_ready:
+	elif target != null:
 		global_position = global_position.move_toward(target.global_position,delta * speed)
 		if global_position == target.global_position:
 			$AnimatedSprite2D.stop()
+			if $BiteCooldown.is_stopped():
+				$BiteCooldown.start()
 		else:
 			$AnimatedSprite2D.play()
 	else:
@@ -32,12 +45,27 @@ func _physics_process(delta: float) -> void:
 func update_flowers():
 	flowers = get_tree().get_nodes_in_group("flowers")
 	
-func setup(new_position):
-	sync_to_physics = false
-	position = new_position
+func setup(bug_type, new_position):
+	match bug_type:
+		BugType.APHID:
+			$AnimatedSprite2D.sprite_frames = aphid_sprites
+		BugType.CATERPILLAR:
+			$AnimatedSprite2D.sprite_frames = caterpillar_sprites
+			health = 200.0
+			speed = 100.0
+			damage_value = 50
+		BugType.GRASSHOPPER:
+			$AnimatedSprite2D.sprite_frames = grasshopper_sprites
+			health = 300.0
+			speed = 300.0
+			damage_value = 100
 	global_position = new_position
-	sync_to_physics = true
 
 
-func _on_ready_timer_timeout() -> void:
-	bug_ready = true
+func _on_bite_cooldown_timeout() -> void:
+	print("in timeout..")
+	if(is_instance_valid(target)):
+		target.take_damage(damage_value)
+		$BiteCooldown.start()
+	else:
+		$BiteCooldown.stop()

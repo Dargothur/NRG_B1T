@@ -37,7 +37,7 @@ func setup(new_flower_type):
 	flowerType = new_flower_type
 	
 func _process(delta: float) -> void:
-	water_level -= delta
+	water_level -= delta * 0.75
 	health += delta
 	$ProgressBar.value = water_level
 	if(water_level <= 50 and water_level >= 1):
@@ -92,6 +92,9 @@ func _on_progress_bar_timer_timeout() -> void:
 	
 func take_damage(damage):
 	health -= damage
+	print(health)
+	if(health <= 0):
+		queue_free()
 
 func update_bugs():
 	bugs = get_tree().get_nodes_in_group("bugs")
