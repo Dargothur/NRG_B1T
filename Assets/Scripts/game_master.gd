@@ -13,7 +13,7 @@ enum Tool {
 	BUG_KILLER
 }
 
-var player_currency = 1000
+var player_currency = 10
 var player_label_position = null
 var current_tool = Tool.NONE
 var in_garden = false

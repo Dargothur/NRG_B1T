@@ -69,3 +69,8 @@ func _on_bite_cooldown_timeout() -> void:
 		$BiteCooldown.start()
 	else:
 		$BiteCooldown.stop()
+
+func take_damage(damage_amt):
+	health -= damage_amt
+	if health <= 0:
+		queue_free()
