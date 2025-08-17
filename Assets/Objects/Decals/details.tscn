@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://bd8gkrjcg1vos"]
+
+[ext_resource type="PackedScene" uid="uid://c2qn1eq6o0a2c" path="res://Assets/Objects/Decals/Bumps.tscn" id="1_w4ewh"]
+[ext_resource type="PackedScene" uid="uid://ca6n6ypgd6mm" path="res://Assets/Objects/Decals/Dirt-Grass.tscn" id="2_acf8d"]
+[ext_resource type="PackedScene" uid="uid://w3imkpopos3t" path="res://Assets/Objects/Decals/Rock1.tscn" id="3_uo7ej"]
+[ext_resource type="PackedScene" uid="uid://c3p0q6144r0mb" path="res://Assets/Objects/Decals/Rock2.tscn" id="4_t6so6"]
+[ext_resource type="PackedScene" uid="uid://e2nwh6osj4tq" path="res://Assets/Objects/Decals/Rock3.tscn" id="5_ta40m"]
+[ext_resource type="PackedScene" uid="uid://bcqc8dg2jds66" path="res://Assets/Objects/Decals/Weird-Patch.tscn" id="6_vwoif"]
+[ext_resource type="PackedScene" uid="uid://ys1eunbav72q" path="res://Assets/Objects/Decals/Weird-Sticks.tscn" id="7_f634i"]
+
+[node name="Details" type="Node2D"]
+
+[node name="Bumps" parent="." instance=ExtResource("1_w4ewh")]
+position = Vector2(126, 207)
+
+[node name="Rock3" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(1051, 142)
+
+[node name="Rock12" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(83, 648)
+
+[node name="Rock1" parent="." instance=ExtResource("3_uo7ej")]
+position = Vector2(101, 637)
+
+[node name="Rock2" parent="." instance=ExtResource("4_t6so6")]
+position = Vector2(196, 189)
+
+[node name="Dirt-Grass" parent="." instance=ExtResource("5_ta40m")]
+position = Vector2(993, 670)
+
+[node name="Weird-Sticks" parent="." instance=ExtResource("6_vwoif")]
+position = Vector2(609, 614)
+
+[node name="Rock11" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(687, 658)
+
+[node name="Rock4" parent="." instance=ExtResource("7_f634i")]
+position = Vector2(680, 642)
+
+[node name="Bumps2" parent="." instance=ExtResource("1_w4ewh")]
+position = Vector2(1014, 460)
+
+[node name="Bumps3" parent="." instance=ExtResource("1_w4ewh")]
+position = Vector2(369, 470)
+
+[node name="Rock5" parent="." instance=ExtResource("4_t6so6")]
+position = Vector2(73, 47)
+
+[node name="Weird-Sticks2" parent="." instance=ExtResource("6_vwoif")]
+position = Vector2(642.5, 435)
+scale = Vector2(2.21875, 1.875)
+
+[node name="Rock10" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(1176, 535)
+
+[node name="Rock6" parent="." instance=ExtResource("4_t6so6")]
+position = Vector2(1200, 526)
+
+[node name="Rock7" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(234, 540)
+
+[node name="Rock8" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(491, 239)
+
+[node name="Bumps4" parent="." instance=ExtResource("1_w4ewh")]
+position = Vector2(859, 151)
+
+[node name="Rock9" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(301, 96)
+
+[node name="Bumps5" parent="." instance=ExtResource("1_w4ewh")]
+position = Vector2(48, 55)
+
+[node name="Weird-Sticks3" parent="." instance=ExtResource("6_vwoif")]
+position = Vector2(492, 227)
+
+[node name="Weird-Sticks4" parent="." instance=ExtResource("6_vwoif")]
+position = Vector2(296, 108)
+
+[node name="Rock13" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(856, 147)
+
+[node name="Rock15" parent="." instance=ExtResource("3_uo7ej")]
+position = Vector2(1020, 353)
+
+[node name="Rock14" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(988.5, 358)
+scale = Vector2(2.59375, 2)
+
+[node name="Rock16" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(522, 238)
+
+[node name="Rock18" parent="." instance=ExtResource("7_f634i")]
+position = Vector2(838, 270)
+
+[node name="Rock17" parent="." instance=ExtResource("2_acf8d")]
+position = Vector2(853, 287)
