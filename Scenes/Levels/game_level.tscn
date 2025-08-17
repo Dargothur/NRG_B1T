@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bcb7nm6cjb6ix" path="res://Assets/Images/Watering Can/Watering Can Upgrade.png" id="10_hyqiq"]
 [ext_resource type="Script" uid="uid://bho8jn8n8jqsp" path="res://Assets/Scripts/garden.gd" id="11_jsuo6"]
 [ext_resource type="Texture2D" uid="uid://bgr18ojbnpfk5" path="res://Assets/Images/Fly Swatter/Fly Swatter Upgrade.png" id="11_svdjn"]
-[ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can.png" id="13_wwnap"]
+[ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
 [ext_resource type="Script" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
 [ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
 [ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
