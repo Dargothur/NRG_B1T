@@ -12,6 +12,7 @@ func _on_mouse_exited() -> void:
 func _on_pressed() -> void:
 	if GameMaster.player_currency >= GameMaster.watering_upgrade_cost:
 		GameMaster.watering_lv += 1
+		$"../../cntrBugKillerUpgrade/btnBugKillerUpgrade/Upgrade_Noise".play()
 		GameMaster.player_currency -= GameMaster.watering_upgrade_cost
 		GameMaster.watering_upgrade_cost += GameMaster.watering_upgrade_cost
 		$"../../../lblWCUpgradePrice".text = "$" + str(GameMaster.watering_upgrade_cost)

@@ -4,6 +4,8 @@ var game_started = false
 
 var currentWave = 0
 
+var gameover = 0
+
 @onready
 var money_label = $VBoxContainer/PlayerCurrencyLabel
 
@@ -23,6 +25,9 @@ func _process(delta):
 		if $WaveTimer.is_stopped():
 			$WaveTimer.start()
 	elif game_started:
+		gameover += 1
+		if gameover == 1:
+			$Game_Over.play()
 		$lblGameOver.visible = true
 		$btnReturnToMainMenu.visibile = true
 	
