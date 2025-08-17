@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://dg2yih0ydbb74" path="res://Assets/Scripts/btn_watering_can_upgrade.gd" id="12_pe30b"]
 [ext_resource type="Texture2D" uid="uid://cls6hpo43q3m0" path="res://Assets/Images/Watering Can/Watering-Can-Icn.png" id="13_wwnap"]
 [ext_resource type="Script" uid="uid://cerl101utitav" path="res://Assets/Scripts/btn_bug_killer_upgrade.gd" id="14_d3gwg"]
-[ext_resource type="Script" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
+[ext_resource type="Script" uid="uid://8e57bhvgsrop" path="res://Assets/Scripts/btn_watering_can.gd" id="14_ynn2x"]
 [ext_resource type="AudioStream" uid="uid://bndkosv1voeem" path="res://Assets/Sound Effects/Planting.mp3" id="15_gmuxe"]
 [ext_resource type="Script" uid="uid://wxjplsga3vxt" path="res://Assets/Scripts/btn_bug_killer.gd" id="15_svdjn"]
 [ext_resource type="AudioStream" uid="uid://brsph1qv6xr7x" path="res://Assets/Sound Effects/Place_Sprinkler.mp3" id="16_680e6"]
@@ -505,7 +505,7 @@ wait_time = 60.0
 
 [node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_d3gwg")
-volume_db = -10.0
+volume_db = -23.867
 autoplay = true
 bus = &"Music"
 parameters/looping = true
@@ -547,7 +547,6 @@ theme_override_font_sizes/font_size = 14
 text = "VICTORY"
 horizontal_alignment = 1
 vertical_alignment = 1
-
 
 [node name="lblFreesiaName" type="Label" parent="."]
 z_index = 2
@@ -652,6 +651,7 @@ theme_override_font_sizes/font_size = 14
 text = "DMG+"
 horizontal_alignment = 1
 vertical_alignment = 1
+
 [node name="Game_Over" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("30_av1xa")
 
