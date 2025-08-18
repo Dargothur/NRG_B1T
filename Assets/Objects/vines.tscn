@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://uv6jlrpf1ef4"]
 
-[ext_resource type="Script" uid="uid://ch1y8suqoqwtc" path="res://Assets/Scripts/vines.gd" id="1_55dux"]
+[ext_resource type="Script" path="res://Assets/Scripts/vines.gd" id="1_55dux"]
 [ext_resource type="SpriteFrames" uid="uid://bl350dvbprcik" path="res://Assets/SpriteFrames/sprite_frames_vines.tres" id="2_gdf6g"]
 [ext_resource type="PackedScene" uid="uid://co241euqo2bua" path="res://Assets/Flowers/Vines/grab_coin.tscn" id="2_uog6j"]
 [ext_resource type="SpriteFrames" uid="uid://clgurdejiqua7" path="res://Assets/SpriteFrames/sprite_frames_tentacle.tres" id="4_imocg"]
-[ext_resource type="AudioStream" uid="uid://bbqcrrfmlgfub" path="res://Assets/Sound Effects/Tent_Growth.mp3" id="5_gu2bj"]
+[ext_resource type="AudioStream" uid="uid://b8k5ijsesikf7" path="res://Assets/Sound Effects/Tent_Growth.mp3" id="5_gu2bj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_55dux"]
 
 [node name="Vines" type="Area2D"]
+z_index = -1
 scale = Vector2(2, 2)
 script = ExtResource("1_55dux")
 tent_grab = ExtResource("2_uog6j")
