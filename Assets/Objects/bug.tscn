@@ -6,6 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pfsbd"]
 
 [node name="Area2D2" type="Area2D" groups=["bugs"]]
+z_index = 1
 script = ExtResource("1_ygbab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

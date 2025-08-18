@@ -67,14 +67,16 @@ func set_click(click_pos):
 	clicked = true
 
 func _play_coin_grab() -> void:
-	$Coin_Grab.volume_db = randf_range(-2.0, 1.0)
-	$Coin_Grab.pitch_scale = randf_range(3.0, 4.0)
-	$Coin_Grab.play()
+	if is_instance_valid(self):
+		$Coin_Grab.volume_db = randf_range(-2.0, 1.0)
+		$Coin_Grab.pitch_scale = randf_range(3.0, 4.0)
+		$Coin_Grab.play()
 
 func _play_coin_banked() -> void:
-	$Coin_Recieved.volume_db = randf_range(-20.0, -15.0)
-	$Coin_Recieved.pitch_scale = randf_range(1.0, 1.1)
-	$Coin_Recieved.play()
+	if is_instance_valid(self):
+		$Coin_Received.volume_db = randf_range(-20.0, -15.0)
+		$Coin_Received.pitch_scale = randf_range(1.0, 1.1)
+		$Coin_Received.play()
 
 func _on_coin_received_finished() -> void:
 	self.queue_free()

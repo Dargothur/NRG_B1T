@@ -180,7 +180,7 @@ offset_right = 1148.0
 offset_bottom = 695.0
 mouse_filter = 1
 theme = ExtResource("2_0rvva")
-text = "$9999"
+text = "$4999"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
